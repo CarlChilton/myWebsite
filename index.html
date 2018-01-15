@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CB Creative Website Design</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<style type="text/css">
+
+		#titleBar {
+			height: 15%;
+			border-style: solid;
+			border-width: 2px;
+			border-color: black;
+			position: fixed;
+			top: 0px;
+			width: 98%;
+			left: 0.5%;
+			z-index: 3;
+			padding-top: 1%;
+			padding-left: 1%;
+			padding-bottom: 1%;
+		}
+		#logo {
+			height: 50%;
+			border-style: solid;
+			border-width: 2px;
+			border-color: black;
+			z-index: 4;
+			display: flex;
+			position: absolute;
+			width: 20%;
+			object-fit: contain;
+		}
+
+	</style>
+</head>
+<body>
+
+	<nav>
+		<div class="buttonLink" id="buttonHome"></div>	
+		<div class="buttonLink" id="buttonAbout"></div>
+		<div class="buttonLink" id="buttonPortfolio"></div>
+		<div class="buttonLink" id="buttonContact"></div>
+	</nav>
+
+	<div id="titleBar">
+		<div>
+			<svg id="logo"> 
+
+			</svg>
+		</div>
+	</div>
+
+	<script> 
+
+		$(document).ready(function(){
+
+   			var cw = $('#logo').height();
+			$('#logo').css({'width':cw+'px'});
+
+		}); 
+
+		
+
+	</script>
+
+
+
+</body>
+</html>
