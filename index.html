@@ -16,21 +16,25 @@
 			width: 98%;
 			left: 0.5%;
 			z-index: 3;
-			padding-top: 1%;
-			padding-left: 1%;
-			padding-bottom: 1%;
+			padding: 0.05%;
+		}
+		#titleBar:after {
+			content: "";
+			display: block;
+			padding-bottom: 100%;
 		}
 		#logo {
-			height: 50%;
+			margin: 2%;
+			width: 7vw;
+			height: 7vw;
 			border-style: solid;
 			border-width: 2px;
 			border-color: black;
 			z-index: 4;
-			display: flex;
 			position: absolute;
-			width: 20%;
 			object-fit: contain;
 		}
+
 
 	</style>
 </head>
@@ -44,21 +48,11 @@
 	</nav>
 
 	<div id="titleBar">
-		<div>
-			<svg id="logo"> 
-
-			</svg>
-		</div>
+		<div id="logo"></div>
 	</div>
 
 	<script> 
 
-		$(document).ready(function(){
-
-   			var cw = $('#logo').height();
-			$('#logo').css({'width':cw+'px'});
-
-		}); 
 
 		
 
