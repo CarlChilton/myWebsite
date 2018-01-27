@@ -2,9 +2,48 @@
 <html>
 <head>
 	<title>CB Creative Website Design</title>
+	<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<style type="text/css">
+
+		@keyframes titleBarDropDown {
+			from {opacity: 0;}
+			to {opacity: 1;}
+		}
+
+		@keyframes aboutSlideIn {
+			from {left:-400px;}
+			to {left:0px;}
+		}
+
+		@keyframes portfolioSlideIn {
+			from {left:100%;}
+			to {left: 15%;}
+		}
+
+		@keyframes contactSlideIn {
+			from {left:-400px;}
+			to {left:0px;}
+		}
+
+		@keyframes buttonFlash {
+			0% {background-color: #ffe8cc;}
+			25% {background-color: #ffaf4d}
+			50% {background-color: #ffe8cc;}
+			75% {background-color: #ffaf4d; color: black;}
+			100% {background-color: #ffe8cc; color: #ffe8cc;}
+			
+		}
+
+		@keyframes contentHider {
+			/*from {height: 82%; top: 12%;}
+			to {height: 10%; top: 40%;}*/
+
+			30% {height: 10%; top: 40%;}
+			60% {height: 10%; top: 40%; opacity: 1;}
+			100% {height: 10%; top: 40%; opacity: 0;}
+		}
 
 		body {
 			background-color: black;
@@ -13,59 +52,237 @@
 			background-clip: padding-box;
 			background-position: 30% 0%;
 			background-size: 300%;
-			
-
+			overflow-x: hidden;
+			overflow-y: hidden;
 
 		}
-
 		#titleBar {
 			height: 10%;
 			border-style: solid;
-			border-width: 2px;
+			border-width: 0px 5px 5px 0px;
 			border-color: black;
 			position: fixed;
 			top: 0px;
-			width: 98%;
-			left: 0.5%;
+			width: 100%;
+			left: 0px;
 			z-index: 3;
-			background-color: white;
-		}
-		#titleBar:after {
-			content: "";
-			display: block;
-			padding-bottom: 100%;
+			background-color: #663399;
+			font-family: Aldrich;
+			font-weight: bold;	
+			font-size: 
+			color: white;
+			animation-name: titleBarDropDown;
+			animation-duration: 1s;
+			animation-timing-function: ease-out;
+
 		}
 		#logo {
-			width: 6vw;
-			height: 6vw;
+			margin: auto;
+			top: 15%;
+			left: 5%;
+			height: 10vw;
 			border-style: solid;
-			border-width: 2px;
+			border-width: 3px;
 			border-color: black;
 			z-index: 4;
-			position: fixed;
+			position: absolute;
 			object-fit: contain;
+			text-align: center;
+			line-height: 10vw;
+			color: white;
+		}
+		#title {
+			margin-left: 25%;
+			margin-top: 5%;
+			color: white;
+			line-height: 6vw;
+			text-shadow: 2px 2px black;
+		}
+		.buttonLink {
+			border-style: solid;
+			border-width: 5px;
+			border-color: black;
+			border-radius: 5px;
+			background-color: #ffaf4d;
+			height: 15%;
+			width: 90%;
+			z-index: 3;
+			position: absolute;
+			text-align: center;
+			font-family: Aldrich;
+			font-size: 10vw;
+			padding: 6vw;
+			box-sizing: border-box;
+			line-height: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+		#buttonAbout {
+			top: 20%;
+			left: -400px;
+			border-radius: 0px 50px 50px 0px;
+			border-left: 0;
+			animation-name: aboutSlideIn;
+			animation-duration: 1s;
+			animation-timing-function: ease-out;
+			animation-delay: 0.8s;
+			animation-fill-mode: forwards;
+			/*display: none;*/
+		}
+		#buttonPortfolio {
+			top: 45%;
+			left: 100%;
+			border-radius: 50px 0px 0px 50px;
+			animation-name: portfolioSlideIn;
+			animation-duration: 1s;
+			animation-timing-function: ease-out;
+			animation-delay: 1.2s;
+			animation-fill-mode: forwards;
+			/*display: none;*/
+		}
+		#buttonContact {
+			top: 70%;
+			left: -400px;
+			border-radius: 0px 50px 50px 0px;
+			border-left: 0;
+			animation-name: contactSlideIn;
+			animation-duration: 1s;
+			animation-timing-function: ease-out;
+			animation-delay: 1.6s;
+			animation-fill-mode: forwards;
+			/*display: none;*/
 		}
 
+
+		.contentDisplayer {
+			border-style: solid;
+			border-width: 10%;
+			border-color: black;
+			border-radius: 8px 8px 50px 50px;
+			background: rgba(0, 0, 0, 0.7);
+			top: 14%;
+			height: 80%;
+			width: 90%;
+			margin: 3%;
+			z-index: 4;
+			position: absolute;
+			text-align: center;
+			font-family: Aldrich;
+			font-size: 10vw;
+			box-sizing: border-box;
+			/*display: flex;*/
+			display: none;
+		}
+		#aboutMeTitle {
+			border-style: solid;
+			border-width: 2%;
+			border-color: black;
+			border-radius: 8px;
+			position: absolute;
+			height: 22vw;
+			width: 102%;
+			left: -1%;
+			top: -4%;
+			margin:0;
+			padding: 4vw;
+			box-sizing: border-box;
+			background-color: #ffaf4d;
+			z-index: 5;
+			
+		}
+
+		#aboutMeContainer {
+			color: white;
+			font-size: 5vw;
+			top: 15%;
+			height: 56%;
+			position: absolute;
+			overflow-y: scroll;
+			text-align: justify;
+			padding: 5%;
+		}
+
+		#buttonHome {
+			top: 78%;
+			border-radius: 50px;
+			margin: 5%;
+			position: absolute;
+			box-sizing: border-box;
+			line-height: 10%;
+
+		}
+
+		.buttonFlasher {
+			animation-name: buttonFlash;
+			animation-duration: 0.8s;
+			animation-fill-mode: forwards;
+
+		}
+
+		.fontColorFade {
+			animation-delay: 0.8s;
+			animation-name: fontColorChanger;
+			animation-duration: 0.8s;
+			animation-fill-mode: forwards;
+		}
+
+		.foldAndHide {
+			animation-delay: 0.8s;
+			animation-name: contentHider;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
 
 	</style>
 </head>
+
 <body>
 
 	<nav>
-		<div class="buttonLink" id="buttonHome"></div>	
-		<div class="buttonLink" id="buttonAbout"></div>
-		<div class="buttonLink" id="buttonPortfolio"></div>
-		<div class="buttonLink" id="buttonContact"></div>
+			
+		<div class="buttonLink" id="buttonAbout">About</div>
+		<div class="buttonLink" id="buttonPortfolio">Portfolio</div>
+		<div class="buttonLink" id="buttonContact">Contact</div>
+
 	</nav>
 
 	<div id="titleBar">
-		<div id="logo"></div>
+		<div id="logo">CB</div>
+		<div id="title">Creative Website Design</div>
+	</div>
+	<div class="contentDisplayer" id="aboutMe">
+		<div id="aboutMeTitle">About Me</div>
+		<div id="aboutMeContainer">My name is Carl Chilton. I have much exposure to the IT industry. I worked as an desktop, network and server engineer for 10 years.			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			 
+		</div>
+		<div class="buttonLink" id="buttonHome">Home</div> 
 	</div>
 
-	<script> 
+	<script type="text/javascript">
 
 
-		
+		$(document).ready(function() {
+
+			$("#buttonHome").click(function(){
+				$("#buttonHome").addClass("buttonFlasher");
+				$(".contentDisplayer").addClass("foldAndHide");
+			});
+
+   			var cw = $('#logo').height();
+			$('#logo').css({'width':cw+'px'});
+
+
+		}); 		
 
 	</script>
 
