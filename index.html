@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>CB Creative Website Design</title>
-	<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'/>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<style type="text/css">
 
@@ -12,24 +12,29 @@
 			to {opacity: 1;}
 		}
 
-		@keyframes aboutSlideIn {
+		@keyframes slideInFromLeft {
 			from {left:-400px;}
 			to {left:0px;}
 		}
 
-		@keyframes portfolioSlideIn {
-			from {left:100%;}
+		@keyframes slideOutToLeft {
+			from {left:0px;}
+			to {left:-400px;}
+		}
+
+		@keyframes slideInFromRight {
+			from {left: 100%;}
 			to {left: 15%;}
 		}
 
-		@keyframes contactSlideIn {
-			from {left:-400px;}
-			to {left:0px;}
+		@keyframes slideOutToRight {
+			from {left: 15%;}
+			to {left: 100%;}
 		}
 
 		@keyframes buttonFlash {
 			0% {background-color: #ffe8cc;}
-			25% {background-color: #ffaf4d}
+			25% {background-color: #ffaf4d;}
 			50% {background-color: #ffe8cc;}
 			75% {background-color: #ffaf4d; color: black;}
 			100% {background-color: #ffe8cc; color: #ffe8cc;}
@@ -37,12 +42,19 @@
 		}
 
 		@keyframes contentHider {
-			/*from {height: 82%; top: 12%;}
-			to {height: 10%; top: 40%;}*/
 
 			30% {height: 10%; top: 40%;}
 			60% {height: 10%; top: 40%; opacity: 1;}
 			100% {height: 10%; top: 40%; opacity: 0;}
+
+		}
+
+		@keyframes contentReveal {
+
+			0% {height: 10%; top: 40%; opacity: 0;}
+			40% {height: 10%; top: 40%; opacity: 1;}
+			70% {height: 80%; top: 14%; opacity: 1;}
+			100% {height: 80%; top: 14%; opacity: 1;}
 		}
 
 		body {
@@ -52,8 +64,7 @@
 			background-clip: padding-box;
 			background-position: 30% 0%;
 			background-size: 300%;
-			overflow-x: hidden;
-			overflow-y: hidden;
+			overflow: hidden;
 
 		}
 		#titleBar {
@@ -69,7 +80,7 @@
 			background-color: #663399;
 			font-family: Aldrich;
 			font-weight: bold;	
-			font-size: 
+			font-size: 6vw;
 			color: white;
 			animation-name: titleBarDropDown;
 			animation-duration: 1s;
@@ -95,7 +106,8 @@
 			margin-left: 25%;
 			margin-top: 5%;
 			color: white;
-			line-height: 6vw;
+			/*line-height: 6vw;*/
+			padding: 1vw;
 			text-shadow: 2px 2px black;
 		}
 		.buttonLink {
@@ -111,7 +123,7 @@
 			text-align: center;
 			font-family: Aldrich;
 			font-size: 10vw;
-			padding: 6vw;
+			padding: 7vw;
 			box-sizing: border-box;
 			line-height: 100%;
 			overflow: hidden;
@@ -119,40 +131,53 @@
 		}
 		#buttonAbout {
 			top: 20%;
-			left: -400px;
 			border-radius: 0px 50px 50px 0px;
 			border-left: 0;
-			animation-name: aboutSlideIn;
+			z-index: 6;
+
+		}
+
+		.buttonAboutSlideIn {
+			left: -400px;
+			animation-name: slideInFromLeft;
 			animation-duration: 1s;
 			animation-timing-function: ease-out;
 			animation-delay: 0.8s;
 			animation-fill-mode: forwards;
-			/*display: none;*/
 		}
+
 		#buttonPortfolio {
 			top: 45%;
-			left: 100%;
+			
 			border-radius: 50px 0px 0px 50px;
-			animation-name: portfolioSlideIn;
+			
+			z-index: 6;	
+		}
+
+		.buttonPortfolioSlideIn {
+			left: 100%;
+			animation-name: slideInFromRight;
 			animation-duration: 1s;
 			animation-timing-function: ease-out;
 			animation-delay: 1.2s;
 			animation-fill-mode: forwards;
-			/*display: none;*/
+
 		}
 		#buttonContact {
 			top: 70%;
-			left: -400px;
 			border-radius: 0px 50px 50px 0px;
-			border-left: 0;
-			animation-name: contactSlideIn;
+			border-left: 0;			
+			z-index: 6;
+		}
+
+		.buttonContactSlideIn {
+			left: -400px;
+			animation-name: slideInFromLeft;
 			animation-duration: 1s;
 			animation-timing-function: ease-out;
 			animation-delay: 1.6s;
 			animation-fill-mode: forwards;
-			/*display: none;*/
 		}
-
 
 		.contentDisplayer {
 			border-style: solid;
@@ -160,8 +185,7 @@
 			border-color: black;
 			border-radius: 8px 8px 50px 50px;
 			background: rgba(0, 0, 0, 0.7);
-			top: 14%;
-			height: 80%;
+			opacity: 0;
 			width: 90%;
 			margin: 3%;
 			z-index: 4;
@@ -170,10 +194,10 @@
 			font-family: Aldrich;
 			font-size: 10vw;
 			box-sizing: border-box;
-			/*display: flex;*/
-			display: none;
+			display: flex;
 		}
-		#aboutMeTitle {
+
+		.contentTitle {
 			border-style: solid;
 			border-width: 2%;
 			border-color: black;
@@ -191,7 +215,7 @@
 			
 		}
 
-		#aboutMeContainer {
+		.contentContainer {
 			color: white;
 			font-size: 5vw;
 			top: 15%;
@@ -202,13 +226,16 @@
 			padding: 5%;
 		}
 
-		#buttonHome {
+
+
+		.buttonHome {
 			top: 78%;
 			border-radius: 50px;
 			margin: 5%;
 			position: absolute;
 			box-sizing: border-box;
 			line-height: 10%;
+			padding: 6%;
 
 		}
 
@@ -227,10 +254,61 @@
 		}
 
 		.foldAndHide {
+			opacity: 1;
+			top: 14%;
+			height: 80%;
 			animation-delay: 0.8s;
 			animation-name: contentHider;
 			animation-duration: 2s;
 			animation-fill-mode: forwards;
+		}
+
+		.unfoldAndReveal {
+			
+			animation-delay: 1.5s;
+			animation-name: contentReveal;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+
+		.slideOutLeft {
+			animation-name: slideOutToLeft;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in;
+		}
+
+		.slideOutRight {
+			animation-name: slideOutToRight;
+			animation-duration: 1s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in;
+		}
+
+		.slideOutLeftSelected {
+			animation-name: slideOutToLeft, buttonFlash;
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in;
+		}
+
+		.slideOutRightSelected {
+			animation-name: slideOutToRight, buttonFlash;
+			animation-duration: 1.5s;
+			animation-fill-mode: forwards;
+			animation-timing-function: ease-in;
+		}
+
+		#comingSoonPic {
+			width: 100%;
+			top: 0px;
+			left: 0px;
+			position: absolute;
+			z-index: -1;
+		}
+
+		a {
+			color:white;
 		}
 
 	</style>
@@ -240,19 +318,21 @@
 
 	<nav>
 			
-		<div class="buttonLink" id="buttonAbout">About</div>
-		<div class="buttonLink" id="buttonPortfolio">Portfolio</div>
-		<div class="buttonLink" id="buttonContact">Contact</div>
+		<div class="buttonLink buttonAboutSlideIn" id="buttonAbout">About</div>
+		<div class="buttonLink buttonPortfolioSlideIn" id="buttonPortfolio">Portfolio</div>
+		<div class="buttonLink buttonContactSlideIn" id="buttonContact">Contact</div>
 
 	</nav>
 
 	<div id="titleBar">
 		<div id="logo">CB</div>
-		<div id="title">Creative Website Design</div>
+		<div id="title">Innovative Design</div>
 	</div>
 	<div class="contentDisplayer" id="aboutMe">
-		<div id="aboutMeTitle">About Me</div>
-		<div id="aboutMeContainer">My name is Carl Chilton. I have much exposure to the IT industry. I worked as an desktop, network and server engineer for 10 years.			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+
+		<div class="contentTitle" id="aboutMeTitle">About Me</div>
+
+		<div class="contentContainer" id="aboutMeContainer">My name is Carl Chilton. I have much exposure to the IT industry. I worked as an desktop, network and server engineer for 10 years.			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -265,18 +345,142 @@
 			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			 
 		</div>
-		<div class="buttonLink" id="buttonHome">Home</div> 
+
+		<div class="buttonLink buttonHome" id="homeAbout">Home</div> 
+	</div>
+
+	<div class="contentDisplayer" id="portfolio">
+
+		<div class="contentTitle" id="portfolioTitle">Portfolio</div>
+
+		<div class="contentContainer" id="portfolioContainer">At present, this is my first website so don't have anything other to showcase, however, you can find my contact details on the previous page, if you wish to get in touch. I'm eager to begin building it up for exposure. 			 
+		<img id="comingSoonPic" src="img/comingSoon.png" alt="Coming soon image"/>
+
+		</div>
+
+		<div class="buttonLink buttonHome" id="homePortfolio">Home</div> 
+	</div>
+
+	<div class="contentDisplayer" id="contact">
+
+		<div class="contentTitle" id="contactTitle">Contact Me</div>
+
+		<div class="contentContainer" id="contactContainer">If you wish to get in touch, just to ask questions or request some work to be done. Please email me on the address below or through PeoplePerHour. Below are other areas where you can take a look at my activities. 
+			<ul> 
+				<li>CarlChilton@Yahoo.co.uk</li>
+				<li><a href="https://www.peopleperhour.com/freelancer/carl/front-end-web-developer/1797113">People per hour</a></li>
+
+
+			</ul>
+
+		</div>
+
+		<div class="buttonLink buttonHome" id="homeContact">Home</div> 
 	</div>
 
 	<script type="text/javascript">
 
-
 		$(document).ready(function() {
 
-			$("#buttonHome").click(function(){
-				$("#buttonHome").addClass("buttonFlasher");
-				$(".contentDisplayer").addClass("foldAndHide");
+			function bringBackHome() {
+
+					$("#buttonAbout").removeClass("slideOutLeft buttonFlasher slideOutLeftSelected");
+					$("#buttonAbout").addClass("buttonAboutSlideIn");
+
+					$("#buttonPortfolio").removeClass("slideOutRight buttonFlasher slideOutRightSelected");
+					$("#buttonPortfolio").addClass("buttonPortfolioSlideIn");
+
+					$("#buttonContact").removeClass("slideOutLeft buttonFlasher slideOutLeftSelected");
+					$("#buttonContact").addClass("buttonContactSlideIn");
+
+			};
+
+			$("#buttonAbout").click(function() {
+
+				$("#buttonAbout").removeClass("buttonAboutSlideIn");
+				$("#buttonAbout").addClass("buttonFlasher slideOutLeftSelected");
+
+				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
+				$("#buttonPortfolio").addClass("slideOutRight");
+
+				$("#buttonContact").removeClass("buttonContactSlideIn");				
+				$("#buttonContact").addClass("slideOutLeft");
+
+				$("#aboutMe").removeClass("foldAndHide");
+				$("#aboutMe").addClass("unfoldAndReveal");
+
+				$(".buttonHome").removeClass("buttonFlasher");
+
 			});
+
+			$("#buttonPortfolio").click(function() {
+
+				$("#buttonAbout").removeClass("buttonAboutSlideIn");
+				$("#buttonAbout").addClass("slideOutLeft");
+
+				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
+				$("#buttonPortfolio").addClass("buttonFlasher slideOutRightSelected");
+
+				$("#buttonContact").removeClass("buttonContactSlideIn");				
+				$("#buttonContact").addClass("slideOutLeft");
+
+				$("#portfolio").removeClass("foldAndHide");
+				$("#portfolio").addClass("unfoldAndReveal");
+
+				$(".buttonHome").removeClass("buttonFlasher");
+
+			});
+
+			$("#buttonContact").click(function() {
+
+				$("#buttonAbout").removeClass("buttonAboutSlideIn");
+				$("#buttonAbout").addClass("slideOutLeft");
+
+				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
+				$("#buttonPortfolio").addClass("slideOutRight");
+
+				$("#buttonContact").removeClass("buttonContactSlideIn");				
+				$("#buttonContact").addClass("buttonFlasher slideOutLeftSelected");
+
+				$("#contact").removeClass("foldAndHide");
+				$("#contact").addClass("unfoldAndReveal");
+
+				$(".buttonHome").removeClass("buttonFlasher");
+
+			});
+
+			$("#homeAbout").click(function() {
+
+				$("#homeAbout").addClass("buttonFlasher");
+
+				$("#aboutMe").removeClass("unfoldAndReveal");
+				$("#aboutMe").addClass("foldAndHide");
+
+				setTimeout(bringBackHome, 2000);
+
+			});
+
+			$("#homePortfolio").click(function() {
+
+				$("#homePortfolio").addClass("buttonFlasher");
+
+				$("#portfolio").removeClass("unfoldAndReveal");
+				$("#portfolio").addClass("foldAndHide");
+
+				setTimeout(bringBackHome, 2000);
+
+			});			
+
+			$("#homeContact").click(function() {
+
+				$("#homeContact").addClass("buttonFlasher");
+
+				$("#contact").removeClass("unfoldAndReveal");
+				$("#contact").addClass("foldAndHide");
+
+				setTimeout(bringBackHome, 2000);
+
+			});		
 
    			var cw = $('#logo').height();
 			$('#logo').css({'width':cw+'px'});
