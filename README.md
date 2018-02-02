@@ -1,4 +1,4 @@
-#CB Creative Website Design
+#CB Innovative Website Design
 
 ## Overview
 
@@ -10,17 +10,18 @@ This is my own personal website, a place to show off works in a growing portfoli
 
 ### Existing Features
 - Mobile View with animated buttons and the following sections:
-
-#### About
+	- About
+		- About me, my career history and current status
+	- Portfolio
+		- An area to show future designs
+	- Contact
+		- A method of getting in touch with me
  
 ### Features Left to Implement
-- Single Page Website using JavaScript to navigate the following areas
-    - About
-    - Portfolio
-    - Contact details with various 
-- Visual features
-    - Differing view and animations, based on device
-	- Loading screen with animation
+- Tablet view
+- Desktop view
+- Email form for contact
+- Sliding contact page to show form or alternative methods of contact
+- Loading screen with animation
 
-## Contributing
 
