@@ -9,7 +9,9 @@ This is my own personal website, a place to show off works in a growing portfoli
 ## Features
 
 ### Existing Features
-- None yet!
+- Mobile View with animated buttons and the following sections:
+
+#### About
  
 ### Features Left to Implement
 - Single Page Website using JavaScript to navigate the following areas
