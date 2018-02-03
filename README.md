@@ -1,4 +1,4 @@
-#CB Innovative Website Design
+#CC Creative Website Design
 
 ## Overview
 
@@ -19,9 +19,11 @@ This is my own personal website, a place to show off works in a growing portfoli
  
 ### Features Left to Implement
 - Tablet view
+	- Circular floating buttons with a slight wobbling animation
 - Desktop view
-- Email form for contact
+- Email form for contact with validation (actual email functionality to be added later in the course)
 - Sliding contact page to show form or alternative methods of contact
 - Loading screen with animation
+- tidy up of main title at top and logo
 
 
