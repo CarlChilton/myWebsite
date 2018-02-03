@@ -49,6 +49,13 @@
 
 		}
 
+		@keyframes homeCollapser {
+
+			from {height: 14vh;}
+			to {height: auto;}
+
+		}
+
 		@keyframes contentReveal {
 
 			0% {height: 10%; top: 40%; opacity: 0;}
@@ -58,49 +65,52 @@
 		}
 
 		body {
+			background-clip: padding-box;
 			background-color: black;
 			background-image: url("img/backGround.jpg");
-			background-repeat: no-repeat;
-			background-clip: padding-box;
 			background-position: 30% 0%;
+			background-repeat: no-repeat;
 			background-size: 300%;
 			overflow: hidden;
-
 		}
+
 		#titleBar {
-			height: 10%;
+			animation-duration: 1s;
+			animation-name: titleBarDropDown;
+			animation-timing-function: ease-out;
+			background-color: #663399;
+			border-color: black;
 			border-style: solid;
 			border-width: 0px 5px 5px 0px;
-			border-color: black;
+			color: white;
+			font-family: Aldrich;
+			font-size: 6vw;
+			font-weight: bold;	
+			height: 10%;
+			left: 0px;
 			position: fixed;
 			top: 0px;
-			width: 100%;
-			left: 0px;
+			width: 100%;			
 			z-index: 3;
-			background-color: #663399;
-			font-family: Aldrich;
-			font-weight: bold;	
-			font-size: 6vw;
-			color: white;
-			animation-name: titleBarDropDown;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-
 		}
+
 		#logo {
 			margin: auto;
-			top: 15%;
-			left: 5%;
+			top: 5%;
+			left: 2%;
 			height: 10vw;
-			border-style: solid;
-			border-width: 3px;
-			border-color: black;
+			border-style: double;
+			border-width: 4px;
+			border-color: white;
 			z-index: 4;
 			position: absolute;
 			object-fit: contain;
 			text-align: center;
 			line-height: 10vw;
 			color: white;
+			background-color: #663399;
+			border-radius: 100%;
+			padding: 2%;
 		}
 		#title {
 			margin-left: 20%;
@@ -115,14 +125,14 @@
 			border-color: black;
 			border-radius: 5px;
 			background-color: #ffaf4d;
-			height: 15%;
+			height: 14%;
 			width: 90%;
 			z-index: 3;
 			position: absolute;
 			text-align: center;
 			font-family: Aldrich;
 			font-size: 10vw;
-			padding: 6.5vw;
+			padding: 3.5vh;
 			margin: 0;
 			box-sizing: border-box;
 			line-height: 100%;
@@ -218,20 +228,23 @@
 		.contentContainer {
 			color: white;
 			font-size: 5vw;
-			top: 15%;
-			height: 56%;
+			width: 100%;
+			top: 14%;
+			height: 65%;
 			position: absolute;
 			overflow-y: scroll;
 			text-align: justify;
-			padding: 5%;
+			padding-left: 5%;
+			padding-right: 5%;
+			display: inline-block;
+			box-sizing: border-box;
 		}
 
-
-
 		.buttonHome {
-			top: 78%;
+			top: 82%;
 			border-radius: 50px;
-			margin: 5%;
+			margin-left: 5%;
+			margin-right: 5%;
 			position: absolute;
 			box-sizing: border-box;
 			line-height: 10%;
@@ -311,6 +324,76 @@
 			color:white;
 		}
 
+		p {
+			padding: 0;
+
+		}
+
+		.formField {
+			border-style: solid;
+			width: 95%;
+			height: 3vh;
+			margin-bottom: 5%;
+			font-family: Aldrich;
+			border-radius: 15px;
+			border-width: 2px;
+			border-color: white;
+			background-color: black;
+			color: white;
+			padding: 2%;
+		}
+
+		textarea {
+			width: 96%;
+			height: 12vh;
+			font-family: Aldrich;
+			border-radius: 15px;
+			border-width: 2px;
+			border-color: white;
+			background-color: black;
+			color: white;
+			padding: 2%;
+		}
+		#contactSubmit {
+			width: 102%;
+			padding: 2%;
+			margin-top: 10%;
+			border-color: black;
+			border-width: 2px;
+			font-family: Aldrich;
+			border-radius: 15px;
+			background-color: green;
+			color: white;
+			border-style: solid;
+		}
+		@media only screen and (min-width: 600px) {
+    		/* For tablets: */
+    		.buttonLink {
+				border-radius: 100%;
+				background-color: #ffaf4d;
+				height: 5%;
+				width: auto;
+				position: absolute;
+				text-align: center;
+				font-family: Aldrich;
+				font-size: 10vw;
+				padding: 3.5vh;
+				margin: 0;
+				box-sizing: border-box;
+				line-height: 100%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		
+
+		}
+		@media only screen and (min-width: 768px) {
+    		/* For desktop: */
+    		.buttonLink {
+    			display: none;
+    		}
+		}
+
 	</style>
 </head>
 
@@ -325,14 +408,16 @@
 	</nav>
 
 	<div id="titleBar">
-		<div id="logo">CB</div>
+		<div id="logo">CC</div>
 		<div id="title">Innovative Design</div>
 	</div>
 	<div class="contentDisplayer" id="aboutMe">
 
 		<div class="contentTitle" id="aboutMeTitle">About Me</div>
 
-		<div class="contentContainer" id="aboutMeContainer">My name is Carl Chilton. I have much exposure to the IT industry. I worked as an desktop, network and server engineer for 10 years.			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		<div class="contentContainer" id="aboutMeContainer">
+			<p>My name is Carl Chilton. I have much exposure to the IT industry. I worked as an desktop, network and server engineer for 10 
+			years.			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -342,7 +427,7 @@
 			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			 
 		</div>
 
@@ -353,7 +438,7 @@
 
 		<div class="contentTitle" id="portfolioTitle">Portfolio</div>
 
-		<div class="contentContainer" id="portfolioContainer">At present, this is my first website so don't have anything other to showcase, however, you can find my contact details on the previous page, if you wish to get in touch. I'm eager to begin building it up for exposure. 			 
+		<div class="contentContainer" id="portfolioContainer"><p>At present, this is my first website so don't have anything other to showcase, however, you can find my contact details on the previous page, if you wish to get in touch. I'm eager to begin building it up for exposure.</p>	
 		<img id="comingSoonPic" src="img/comingSoon.png" alt="Coming soon image"/>
 
 		</div>
@@ -365,13 +450,19 @@
 
 		<div class="contentTitle" id="contactTitle">Contact Me</div>
 
-		<div class="contentContainer" id="contactContainer">If you wish to get in touch, just to ask questions or request some work to be done. Please email me on the address below or through PeoplePerHour. Below are other areas where you can take a look at my activities. 
-			<ul> 
-				<li>CarlChilton@Yahoo.co.uk</li>
-				<li><a href="https://www.peopleperhour.com/freelancer/carl/front-end-web-developer/1797113">People per hour</a></li>
+		<div class="contentContainer" id="contactContainer">
 
+			<form name="contactMe" action="/emailMe.php" method="post">
+				Full Name: <br>
+				<input class="formField" type="text" name="fullName" required> <br>
+				Email Address: <br>
+				<input class="formField" type="email" name="emailAddress" required> <br>
+				Brief overview of website: <br>
+				<textarea id="textContent" rows="4" name="websiteDetails" form="contactMe" required="required"></textarea>
+				<br>
+				<input id="contactSubmit" type="submit" value="SUBMIT">
 
-			</ul>
+			</form>
 
 		</div>
 
@@ -451,7 +542,7 @@
 
 			$("#homeAbout").click(function() {
 
-				$("#homeAbout").addClass("buttonFlasher");
+				$("#homeAbout").addClass("buttonFlasher homeCollapse");
 
 				$("#aboutMe").removeClass("unfoldAndReveal");
 				$("#aboutMe").addClass("foldAndHide");
