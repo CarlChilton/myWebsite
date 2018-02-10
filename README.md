@@ -14,8 +14,9 @@ This is my own personal website, a place to show off works in a growing portfoli
 		- About me, my career history and current status
 	- Portfolio
 		- An area to show future designs
+		- The current project model will show fake sites, to utilise a carousel functionality.
 	- Contact
-		- A method of getting in touch with me
+		- A method of getting in touch with me with a form and alternative media
  
 ### Features Left to Implement
 - Tablet view

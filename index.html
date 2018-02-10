@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>CB Innovative Website Design</title>
+	<title>CC Creative Website Design</title>
 	<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'/>
 	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'/>
-	<link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'/>
+	<link href='https://fonts.googleapis.com/css?family=Gloria Hallelujah' rel='stylesheet'/>
 	<link href='https://fonts.googleapis.com/css?family=Changa' rel='stylesheet'/>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<style type="text/css">
 
 		@keyframes titleBarDropDown {
-			from {opacity: 0;}
-			to {opacity: 1;}
+			from {opacity: -200px;}
+			to {opacity: 0px;}
 		}
 
 		@keyframes slideInFromLeft {
@@ -63,8 +63,8 @@
 
 			0% {height: 10%; top: 40%; opacity: 0;}
 			40% {height: 10%; top: 40%; opacity: 1;}
-			70% {height: 80%; top: 14%; opacity: 1;}
-			100% {height: 80%; top: 14%; opacity: 1;}
+			70% {height: 80%; top: 15%; opacity: 1;}
+			100% {height: 80%; top: 15%; opacity: 1;}
 		}
 
 		body {
@@ -98,14 +98,14 @@
 		}
 
 		#logo {
-			margin: auto;
+			margin: 2%;
 			top: 5%;
 			left: 2%;
-			height: auto;
+			/*height: auto;*/
 			width: 10vw;
-			border-style: double;
 			border-width: 4px;
-			border-color: white;
+			border-style: solid;
+			border-color: black;
 			z-index: 4;
 			position: absolute;
 			object-fit: contain;
@@ -113,10 +113,13 @@
 			line-height: 10vw;
 			color: white;
 			background-color: #663399;
-			border-radius: 100%;
-			padding: 2%;
-			font-family: Caveat;
+			border-radius: 5px;
+			padding-left: 2%;
+			padding-right: 2%;
+			font-family: Audiowide;
+			box-sizing: border-box;	
 		}
+
 		#title {
 			margin-left: 20%;
 			/*margin-top: 5%;*/
@@ -137,7 +140,7 @@
 			text-align: center;
 			font-family: Audiowide;
 			font-size: 10vw;
-			padding: 3.5vh;
+			padding: 3.2vh;
 			margin: 0;
 			box-sizing: border-box;
 			line-height: 100%;
@@ -199,7 +202,7 @@
 			border-radius: 8px 8px 50px 50px;
 			background: rgba(0, 0, 0, 0.7);
 			opacity: 0;
-			width: 90%;
+			width: 88%;
 			margin: 3%;
 			z-index: 4;
 			position: absolute;
@@ -212,29 +215,28 @@
 
 		.contentTitle {
 			border-style: solid;
-			border-width: 2%;
+			border-width: 5px;
 			border-color: black;
 			border-radius: 8px;
 			position: absolute;
 			height: 22vw;
 			width: 102%;
 			left: -1%;
-			top: -4%;
-			margin:0;
-			padding: 4vw;
+			top: -6%;
+			margin: 0;
+			padding: 3vw;
 			box-sizing: border-box;
 			background-color: #ffaf4d;
 			z-index: 5;
-			font-family: Audiowide;
-			
+			font-family: Audiowide;			
 		}
 
 		.contentContainer {
 			color: white;
 			font-size: 5vw;
 			width: 100%;
-			top: 14%;
-			height: 65%;
+			top: 12%;
+			height: 68%;
 			position: absolute;
 			overflow-y: scroll;
 			text-align: justify;
@@ -252,7 +254,7 @@
 			position: absolute;
 			box-sizing: border-box;
 			line-height: 10%;
-			padding: 6%;
+			padding: 5.2%;
 
 		}
 
@@ -272,7 +274,7 @@
 
 		.foldAndHide {
 			opacity: 1;
-			top: 14%;
+			top: 15%;
 			height: 80%;
 			animation-delay: 0.8s;
 			animation-name: contentHider;
@@ -381,13 +383,47 @@
 			}
 
     		@keyframes slideInFromLeftContact {
-				from {left:-200px;}
+				from {left:-300px;}
 				to {left: 30%;}
 			}
 
 			@keyframes slideInFromRight {
 				from {left: 130%;}
 				to {left: 60%;}
+			}
+
+			@keyframes slideOutToLeftAbout {
+				from {left:15%;}
+				to {left:-400px;}
+			}
+
+			@keyframes slideOutToLeftContact {
+				from {left:30%;}
+				to {left:-300px;}
+			}
+
+			@keyframes slideOutToRight {
+				from {left: 60%;}
+				to {left: 130%;}
+			}
+
+			@keyframes portfolioWobbler {
+				12.5% {top: 35.2%;}
+				25% {top: 35.4%;}
+				37.5% {top: 35.2%;}
+				50% {top: 35%;}
+				62.5% {top: 34.8%;}
+				70% {top: 34.6%;}
+				82.5% {top: 34.8%;}
+				100% {top: 35%;}
+			}
+
+			@keyframes contentReveal {
+
+				0% {height: 10%; top: 40%; opacity: 0;}
+				40% {height: 10%; top: 40%; opacity: 1;}
+				70% {height: 78%; top: 15%; opacity: 1;}
+				100% {height: 78%; top: 15%; opacity: 1;}
 			}
 
     		body {
@@ -408,7 +444,7 @@
 				width: 35vh;
 				position: absolute;
 				text-align: center;
-				font-family: Aldrich;
+				font-family: Audiowide;
 				font-size: 4vw;
 				padding-top: 13vh;
 				padding-bottom: 13vh;
@@ -441,7 +477,7 @@
 			}
 
 			.buttonPortfolioSlideIn {
-				left: 100%;
+				left: 100%;*
 				animation-name: slideInFromRight;
 				animation-duration: 1s;
 				animation-timing-function: ease-out;
@@ -456,7 +492,7 @@
 			}
 
 			.buttonContactSlideIn {
-				left: -400px;
+				left: -300px;
 				animation-name: slideInFromLeftContact;
 				animation-duration: 1s;
 				animation-timing-function: ease-out;
@@ -465,34 +501,167 @@
 			}
 
 			#logo {
-				margin: auto;
-				top: 5%;
-				left: 2%;
+				margin: 2%;				
+				/*height: auto;*/
 				width: 10vw;
-				border-style: double;
-				border-width: 10px;
-				border-color: white;
-				z-index: 4;
+				line-height: 10vw;
+				padding-left: 2%;
+				padding-right: 2%;
 				position: absolute;
-				object-fit: contain;
-				text-align: center;				
-				color: white;
-				background-color: #663399;
-				border-radius: 100%;
-				padding: 0.5vh;
+				box-sizing: border-box;
 			}
 
 			#title {
-				margin-left: 20%;
+				margin-left: 15%;
 				color: white;
-				padding: 2vw;
+				padding: 1.7vw;
 				text-shadow: 2px 2px black;
 			}
 
 			#titleBar {
 				font-size: 4vw;
-				height: 15%;		
+				height: 12%;		
 			}	
+
+			.portfolioWobble {
+				animation-name: portfolioWobbler;
+				animation-delay: 2.5s;
+				animation-duration: 4s;
+				animation-timing-function: ease-in;
+				animation-iteration-count: infinite;
+			}
+
+			#title {
+				margin-left: 30%;
+			}
+
+			.contentDisplayer {
+				margin-left: 4%;
+				margin-right: 4%;
+				width: 91%;
+				height: 78%;
+			}
+
+			.contentTitle {
+				border-style: solid;
+				border-width: 5px;
+				font-size: 4vw;
+				border-color: black;
+				border-radius: 8px;
+				position: absolute;
+				height: 9vw;
+				width: 102%;
+				left: -1%;
+				top: -5%;
+				margin: 0;
+				padding: 1.2vw;
+				box-sizing: border-box;
+				background-color: #ffaf4d;
+				z-index: 5;
+				font-family: Audiowide;
+			}
+
+			.contentContainer {
+				color: white;
+				font-size: 2vw;
+				width: 100%;
+				top: 12%;
+				height: 70%;
+				position: absolute;
+				overflow-y: scroll;
+				text-align: justify;
+				padding-left: 5%;
+				padding-right: 5%;
+				display: inline-block;
+				box-sizing: border-box;
+			}
+
+			.buttonHome {
+				border-width: 5px;
+				top: 84%;
+				width: 96%;
+				height: 14%;
+				border-radius: 50px;
+				margin-left: 2%;
+				margin-right: 2%;
+				position: absolute;
+				box-sizing: border-box;
+
+				padding: 5.5%;
+			}
+
+			.slideOutLeftAbout {
+				animation-name: slideOutToLeftAbout;
+				animation-duration: 1.2s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			.slideOutLeftContact {
+				animation-name: slideOutToLeftContact;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+			
+			.slideOutLeftAboutSelected {
+				animation-name: slideOutToLeftAbout, buttonFlash;
+				animation-duration: 1.5s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			.slideOutLeftContactSelected {
+				animation-name: slideOutToLeftContact, buttonFlash;
+				animation-duration: 1.5s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			.slideOutRightSelected {
+				animation-name: slideOutToRight, buttonFlash;
+				animation-duration: 1.5s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			.formField {
+				border-style: solid;
+				width: 95%;
+				height: 1vh;
+				margin-bottom: 1%;
+				font-family: Aldrich;
+				border-radius: 15px;
+				border-width: 2px;
+				border-color: white;
+				background-color: black;
+				color: white;
+				padding: 2%;
+			}
+
+			textarea {
+				width: 96%;
+				height: 12vh;
+				font-family: Aldrich;
+				border-radius: 15px;
+				border-width: 2px;
+				border-color: white;
+				background-color: black;
+				color: white;
+				padding: 2%;
+			}
+			#contactSubmit {
+				width: 100%;
+				padding: 2%;
+				margin-top: 2%;
+				border-color: black;
+				border-width: 2px;
+				font-family: Aldrich;
+				border-radius: 15px;
+				background-color: green;
+				color: white;
+				border-style: solid;
+			}
 
 		}
 
@@ -512,7 +681,7 @@
 
 	<div id="titleBar">
 		<div id="logo">CC</div>
-		<div id="title">Innovative Design</div>
+		<div id="title">Creative Design</div>
 	</div>
 	<div class="contentDisplayer" id="aboutMe">
 
@@ -530,7 +699,12 @@
 			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	</p>
 			 
 		</div>
 
@@ -578,13 +752,13 @@
 
 			function bringBackHome() {
 
-					$("#buttonAbout").removeClass("slideOutLeft buttonFlasher slideOutLeftSelected");
+					$("#buttonAbout").removeClass("slideOutLeft slideOutLeftAbout slideOutLeftAboutSelected buttonFlasher slideOutLeftSelected");
 					$("#buttonAbout").addClass("buttonAboutSlideIn");
 
 					$("#buttonPortfolio").removeClass("slideOutRight buttonFlasher slideOutRightSelected");
 					$("#buttonPortfolio").addClass("buttonPortfolioSlideIn");
 
-					$("#buttonContact").removeClass("slideOutLeft buttonFlasher slideOutLeftSelected");
+					$("#buttonContact").removeClass("slideOutLeft slideOutLeftContact buttonFlasher slideOutLeftSelected slideOutLeftContactSelected");
 					$("#buttonContact").addClass("buttonContactSlideIn");
 
 			};
@@ -592,13 +766,23 @@
 			$("#buttonAbout").click(function() {
 
 				$("#buttonAbout").removeClass("buttonAboutSlideIn");
-				$("#buttonAbout").addClass("buttonFlasher slideOutLeftSelected");
+
+				if ($(window).width() < 600) {
+					$("#buttonAbout").addClass("buttonFlasher slideOutLeftSelected");
+				} else {
+					$("#buttonAbout").addClass("buttonFlasher slideOutLeftAboutSelected");
+				}
 
 				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
 				$("#buttonPortfolio").addClass("slideOutRight");
 
-				$("#buttonContact").removeClass("buttonContactSlideIn");				
-				$("#buttonContact").addClass("slideOutLeft");
+				$("#buttonContact").removeClass("buttonContactSlideIn");	
+
+				if ($(window).width() < 600) {
+   					$("#buttonContact").addClass("slideOutLeft");
+				} else {
+   					$("#buttonContact").addClass("slideOutLeftContact");
+				}				
 
 				$("#aboutMe").removeClass("foldAndHide");
 				$("#aboutMe").addClass("unfoldAndReveal");
@@ -610,13 +794,22 @@
 			$("#buttonPortfolio").click(function() {
 
 				$("#buttonAbout").removeClass("buttonAboutSlideIn");
-				$("#buttonAbout").addClass("slideOutLeft");
+
+				if ($(window).width() < 600) {
+					$("#buttonAbout").addClass("slideOutLeft");	
+				} else {
+					$("#buttonAbout").addClass("slideOutLeftAbout");	
+				}				
 
 				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
 				$("#buttonPortfolio").addClass("buttonFlasher slideOutRightSelected");
 
-				$("#buttonContact").removeClass("buttonContactSlideIn");				
-				$("#buttonContact").addClass("slideOutLeft");
+				$("#buttonContact").removeClass("buttonContactSlideIn");
+				if ($(window).width() < 600) {
+					$("#buttonContact").addClass("slideOutLeft");	
+				} else {
+					$("#buttonContact").addClass("slideOutLeftContact");
+				}							
 
 				$("#portfolio").removeClass("foldAndHide");
 				$("#portfolio").addClass("unfoldAndReveal");
@@ -628,13 +821,23 @@
 			$("#buttonContact").click(function() {
 
 				$("#buttonAbout").removeClass("buttonAboutSlideIn");
-				$("#buttonAbout").addClass("slideOutLeft");
+
+				if ($(window).width() < 600) {
+					$("#buttonAbout").addClass("slideOutLeft");	
+				} else {
+					$("#buttonAbout").addClass("slideOutLeftAbout");	
+				}	
 
 				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
 				$("#buttonPortfolio").addClass("slideOutRight");
 
-				$("#buttonContact").removeClass("buttonContactSlideIn");				
-				$("#buttonContact").addClass("buttonFlasher slideOutLeftSelected");
+				$("#buttonContact").removeClass("buttonContactSlideIn");		
+
+				if ($(window).width() < 600) {
+					$("#buttonContact").addClass("buttonFlasher slideOutLeftSelected");
+				} else {
+					$("#buttonContact").addClass("buttonFlasher slideOutLeftContactSelected");
+				}
 
 				$("#contact").removeClass("foldAndHide");
 				$("#contact").addClass("unfoldAndReveal");
