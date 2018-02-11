@@ -11,28 +11,28 @@
 	<style type="text/css">
 
 		@keyframes titleBarDropDown {
-			from {opacity: -200px;}
-			to {opacity: 0px;}
+			from {top: -10vh;}
+			to {top: 0vh;}
 		}
 
 		@keyframes slideInFromLeft {
-			from {left:-400px;}
-			to {left:0px;}
+			from {left:-100vw;}
+			to {left:0vw;}
 		}
 
 		@keyframes slideOutToLeft {
-			from {left:0px;}
-			to {left:-400px;}
+			from {left:0vw;}
+			to {left:-100vw;}
 		}
 
 		@keyframes slideInFromRight {
-			from {left: 100%;}
-			to {left: 15%;}
+			from {left: 100vw;}
+			to {left: 15vw;}
 		}
 
 		@keyframes slideOutToRight {
-			from {left: 15%;}
-			to {left: 100%;}
+			from {left: 15vw;}
+			to {left: 100vw;}
 		}
 
 		@keyframes buttonFlash {
@@ -46,25 +46,25 @@
 
 		@keyframes contentHider {
 
-			30% {height: 10%; top: 40%;}
-			60% {height: 10%; top: 40%; opacity: 1;}
-			100% {height: 10%; top: 40%; opacity: 0;}
+			30% {height: 10vh; top: 40vh;}
+			60% {height: 10vh; top: 40vh; opacity: 1;}
+			100% {height: 10vh; top: 40vh; opacity: 0; display: none;}
 
 		}
 
 		@keyframes homeCollapser {
 
 			from {height: 14vh;}
-			to {height: auto;}
+			to {height: 2vh;}
 
 		}
 
 		@keyframes contentReveal {
 
-			0% {height: 10%; top: 40%; opacity: 0;}
-			40% {height: 10%; top: 40%; opacity: 1;}
-			70% {height: 80%; top: 15%; opacity: 1;}
-			100% {height: 80%; top: 15%; opacity: 1;}
+			0% {height: 10vh; top: 40vh; opacity: 0; display: inline;}
+			40% {height: 10vh; top: 40vh; opacity: 1;}
+			70% {height: 80vh; top: 14vh; opacity: 1;}
+			100% {height: 80vh; top: 14vh; opacity: 1;}
 		}
 
 		body {
@@ -87,22 +87,25 @@
 			border-width: 0px 5px 5px 0px;
 			color: white;
 			font-family: Audiowide;
-			font-size: 6vw;
+			font-size: 4vh;
 			font-weight: bold;	
-			height: 10%;
+			height: 6vh;
 			left: 0px;
 			position: fixed;
 			top: 0px;
-			width: 100%;			
+			width: 100vw;			
 			z-index: 3;
+			padding: 3.2vh;
+			text-shadow: 2px 2px black;
+			color: white;
 		}
 
 		#logo {
-			margin: 2%;
-			top: 5%;
-			left: 2%;
-			/*height: auto;*/
-			width: 10vw;
+			margin: 1vh;
+			top: 1vh;
+			left: 0.5vw;
+			width: 18vw;
+			height: 8vh;
 			border-width: 4px;
 			border-style: solid;
 			border-color: black;
@@ -110,36 +113,34 @@
 			position: absolute;
 			object-fit: contain;
 			text-align: center;
-			line-height: 10vw;
+			/*line-height: 10vw;*/
 			color: white;
 			background-color: #663399;
 			border-radius: 5px;
-			padding-left: 2%;
-			padding-right: 2%;
+			padding: 0.5vh;
 			font-family: Audiowide;
 			box-sizing: border-box;	
 		}
 
 		#title {
-			margin-left: 20%;
-			/*margin-top: 5%;*/
-			color: white;
-			padding: 5vw;
-			text-shadow: 2px 2px black;
+			text-align: center;
+					
+			
 		}
+
 		.buttonLink {
 			border-style: solid;
 			border-width: 5px;
 			border-color: black;
 			border-radius: 5px;
 			background-color: #ffaf4d;
-			height: 14%;
+			height: 14vh;
 			width: 90%;
 			z-index: 3;
 			position: absolute;
 			text-align: center;
 			font-family: Audiowide;
-			font-size: 10vw;
+			font-size: 6vh;
 			padding: 3.2vh;
 			margin: 0;
 			box-sizing: border-box;
@@ -148,7 +149,7 @@
 			text-overflow: ellipsis;
 		}
 		#buttonAbout {
-			top: 20%;
+			top: 20vh;
 			border-radius: 0px 50px 50px 0px;
 			border-left: 0px;
 			z-index: 6;
@@ -156,7 +157,7 @@
 		}
 
 		.buttonAboutSlideIn {
-			left: -400px;
+			left: -100vw;
 			animation-name: slideInFromLeft;
 			animation-duration: 1s;
 			animation-timing-function: ease-out;
@@ -165,13 +166,13 @@
 		}
 
 		#buttonPortfolio {
-			top: 45%;			
+			top: 45vh;			
 			border-radius: 50px 0px 0px 50px;			
 			z-index: 6;	
 		}
 
 		.buttonPortfolioSlideIn {
-			left: 100%;
+			left: 100vw;
 			animation-name: slideInFromRight;
 			animation-duration: 1s;
 			animation-timing-function: ease-out;
@@ -180,14 +181,14 @@
 
 		}
 		#buttonContact {
-			top: 70%;
+			top: 70vh;
 			border-radius: 0px 50px 50px 0px;
 			border-left: 0;			
 			z-index: 6;
 		}
 
 		.buttonContactSlideIn {
-			left: -400px;
+			left: -100vw;
 			animation-name: slideInFromLeft;
 			animation-duration: 1s;
 			animation-timing-function: ease-out;
@@ -196,35 +197,36 @@
 		}
 
 		.contentDisplayer {
+			top: 14vh;
 			border-style: solid;
-			border-width: 10%;
+			border-width: 1vw;
 			border-color: black;
 			border-radius: 8px 8px 50px 50px;
 			background: rgba(0, 0, 0, 0.7);
 			opacity: 0;
-			width: 88%;
-			margin: 3%;
+			width: 90vw;
+			margin: 3vw;
 			z-index: 4;
 			position: absolute;
 			text-align: center;
 			font-family: Aldrich;
-			font-size: 10vw;
+			font-size: 6vh;
 			box-sizing: border-box;
 			display: flex;
 		}
 
 		.contentTitle {
 			border-style: solid;
-			border-width: 5px;
+			border-width: 1.2vw;
 			border-color: black;
 			border-radius: 8px;
 			position: absolute;
-			height: 22vw;
-			width: 102%;
-			left: -1%;
-			top: -6%;
-			margin: 0;
-			padding: 3vw;
+			height: 13vh;
+			width: 90vw;
+			left: -0.8vw;
+			top: -0.8vh;
+			margin: 0vh;
+			padding: 1.8vh;
 			box-sizing: border-box;
 			background-color: #ffaf4d;
 			z-index: 5;
@@ -233,28 +235,31 @@
 
 		.contentContainer {
 			color: white;
-			font-size: 5vw;
+			font-size: 3vh;
 			width: 100%;
-			top: 12%;
-			height: 68%;
+			top: 18%;
+			height: 62%;
 			position: absolute;
 			overflow-y: scroll;
 			text-align: justify;
-			padding-left: 5%;
-			padding-right: 5%;
+			padding-left: 5vw;
+			padding-right: 5vw;
+			padding-top: 0;
 			display: inline-block;
 			box-sizing: border-box;
 		}
 
 		.buttonHome {
+			height: 15%;
 			top: 82%;
 			border-radius: 50px;
-			margin-left: 5%;
-			margin-right: 5%;
+			width: 80vw;
+			margin-left: 4vw;
+			margin-right: 4vw;
 			position: absolute;
 			box-sizing: border-box;
-			line-height: 10%;
-			padding: 5.2%;
+			z-index: 4;
+			padding: 2vh;
 
 		}
 
@@ -272,10 +277,14 @@
 			animation-fill-mode: forwards;
 		}
 
+		.startup {
+			display: none;
+		}
+
 		.foldAndHide {
 			opacity: 1;
-			top: 15%;
-			height: 80%;
+			top: 14vh;
+			height: 80vh;
 			animation-delay: 0.8s;
 			animation-name: contentHider;
 			animation-duration: 2s;
@@ -337,37 +346,38 @@
 
 		.formField {
 			border-style: solid;
-			width: 95%;
+			width: 74vw;
 			height: 3vh;
-			margin-bottom: 5%;
+			margin-bottom: 2vh;
 			font-family: Aldrich;
 			border-radius: 15px;
 			border-width: 2px;
 			border-color: white;
 			background-color: black;
 			color: white;
-			padding: 2%;
+			padding: 1vh;
 		}
 
 		textarea {
-			width: 96%;
-			height: 12vh;
+			width: 74vw;
+			height: 10vh;
 			font-family: Aldrich;
 			border-radius: 15px;
 			border-width: 2px;
 			border-color: white;
 			background-color: black;
 			color: white;
-			padding: 2%;
+			padding: 1vh;
 		}
 
 		#contactSubmit {
-			width: 102%;
-			padding: 2%;
-			margin-top: 10%;
+			width: 70vw;
+			padding: 1vh;
+			margin-left: 4vw;
+			margin-right: 4vw;
 			border-color: black;
-			border-width: 2px;
-			font-family: Aldrich;
+			border-width: 4px;
+			font-family: Audiowide;
 			border-radius: 15px;
 			background-color: green;
 			color: white;
@@ -378,33 +388,33 @@
     		/* For tablets: */
 
     		@keyframes slideInFromLeftAbout {
-				from {left:-400px;}
-				to {left: 15%;}
+				from {left:-50vw;}
+				to {left: 15vw;}
 			}
 
     		@keyframes slideInFromLeftContact {
-				from {left:-300px;}
-				to {left: 30%;}
+				from {left:-50vw;}
+				to {left: 30vw;}
 			}
 
 			@keyframes slideInFromRight {
-				from {left: 130%;}
-				to {left: 60%;}
+				from {left: 100vw;}
+				to {left: 60vw;}
 			}
 
 			@keyframes slideOutToLeftAbout {
-				from {left:15%;}
-				to {left:-400px;}
+				from {left:15vw;}
+				to {left:-50vw;}
 			}
 
 			@keyframes slideOutToLeftContact {
-				from {left:30%;}
-				to {left:-300px;}
+				from {left:30vw;}
+				to {left:-50vw;}
 			}
 
 			@keyframes slideOutToRight {
-				from {left: 60%;}
-				to {left: 130%;}
+				from {left: 60vw;}
+				to {left: 100vw;}
 			}
 
 			@keyframes portfolioWobbler {
@@ -420,10 +430,10 @@
 
 			@keyframes contentReveal {
 
-				0% {height: 10%; top: 40%; opacity: 0;}
-				40% {height: 10%; top: 40%; opacity: 1;}
-				70% {height: 78%; top: 15%; opacity: 1;}
-				100% {height: 78%; top: 15%; opacity: 1;}
+				0% {height: 10vh; top: 40vh; opacity: 0; display: inline;}
+				40% {height: 10vh; top: 40vh; opacity: 1;}
+				70% {height: 80vh; top: 14vh; opacity: 1;}
+				100% {height: 80vh; top: 14vh; opacity: 1;}
 			}
 
     		body {
@@ -437,28 +447,21 @@
 			}
 
     		.buttonLink {    			
-				background-color: #ffaf4d;
-				border-style: solid;
-				border-width: 8px;
+				border-width: 6px;
 				height: 35vh;
 				width: 35vh;
-				position: absolute;
-				text-align: center;
-				font-family: Audiowide;
-				font-size: 4vw;
-				padding-top: 13vh;
-				padding-bottom: 13vh;
-				padding-left: 5vh;
-				padding-right: 5vh;
-				margin: 0;
-				box-sizing: border-box;
-				overflow: auto;
+				font-size: 5vh;
+				padding-top: 13.5vh;
+				padding-bottom: 13.5vh;
+				padding-left: 3vw;
+				padding-right: 3vw;
+				overflow: visible;
 			}
 
 			#buttonAbout {
 				border-radius: 150px 150px 150px 150px;
-				border-left: 8px solid;
-				top: 20%;
+				border-left: 6px solid;
+				top: 20vh;
 				z-index: 6;
 			}
 
@@ -471,13 +474,13 @@
 			}
 
 			#buttonPortfolio {
-				top: 35%;			
+				top: 35vh;			
 				border-radius: 150px 150px 150px 150px;			
 				z-index: 6;	
 			}
 
 			.buttonPortfolioSlideIn {
-				left: 100%;*
+				left: 100vh;
 				animation-name: slideInFromRight;
 				animation-duration: 1s;
 				animation-timing-function: ease-out;
@@ -486,13 +489,13 @@
 			}
 
 			#buttonContact {
-				top: 60%;
+				top: 60vh;
 				border-radius: 150px 150px 150px 150px;
-				border-left: 8px solid;			
+				border-left: 6px solid;			
 			}
 
 			.buttonContactSlideIn {
-				left: -300px;
+				left: -50vw;
 				animation-name: slideInFromLeftContact;
 				animation-duration: 1s;
 				animation-timing-function: ease-out;
@@ -501,26 +504,21 @@
 			}
 
 			#logo {
-				margin: 2%;				
-				/*height: auto;*/
+				margin: 1vh;					
+				height: 10vh;
 				width: 10vw;
-				line-height: 10vw;
-				padding-left: 2%;
-				padding-right: 2%;
-				position: absolute;
-				box-sizing: border-box;
 			}
 
 			#title {
-				margin-left: 15%;
-				color: white;
-				padding: 1.7vw;
-				text-shadow: 2px 2px black;
-			}
+				
+				margin:0;
+				text-align: center
+			} 
 
 			#titleBar {
-				font-size: 4vw;
-				height: 12%;		
+				font-size: 6vh;
+				height: 8vh;
+				
 			}	
 
 			.portfolioWobble {
@@ -531,21 +529,19 @@
 				animation-iteration-count: infinite;
 			}
 
-			#title {
-				margin-left: 30%;
-			}
-
 			.contentDisplayer {
-				margin-left: 4%;
-				margin-right: 4%;
-				width: 91%;
+				margin-left: 4vw;
+				margin-right: 4vw;
+				width: 90vw;
 				height: 78%;
 			}
+
+			/*Continue to review CSS from this point forwards*/
 
 			.contentTitle {
 				border-style: solid;
 				border-width: 5px;
-				font-size: 4vw;
+				font-size: 4vh;
 				border-color: black;
 				border-radius: 8px;
 				position: absolute;
@@ -625,43 +621,8 @@
 				animation-timing-function: ease-in;
 			}
 
-			.formField {
-				border-style: solid;
-				width: 95%;
-				height: 1vh;
-				margin-bottom: 1%;
-				font-family: Aldrich;
-				border-radius: 15px;
-				border-width: 2px;
-				border-color: white;
-				background-color: black;
-				color: white;
-				padding: 2%;
-			}
+			
 
-			textarea {
-				width: 96%;
-				height: 12vh;
-				font-family: Aldrich;
-				border-radius: 15px;
-				border-width: 2px;
-				border-color: white;
-				background-color: black;
-				color: white;
-				padding: 2%;
-			}
-			#contactSubmit {
-				width: 100%;
-				padding: 2%;
-				margin-top: 2%;
-				border-color: black;
-				border-width: 2px;
-				font-family: Aldrich;
-				border-radius: 15px;
-				background-color: green;
-				color: white;
-				border-style: solid;
-			}
 
 		}
 
@@ -683,7 +644,7 @@
 		<div id="logo">CC</div>
 		<div id="title">Creative Design</div>
 	</div>
-	<div class="contentDisplayer" id="aboutMe">
+	<div class="contentDisplayer startup" id="aboutMe">
 
 		<div class="contentTitle" id="aboutMeTitle">About Me</div>
 
@@ -711,7 +672,7 @@
 		<div class="buttonLink buttonHome" id="homeAbout">Home</div> 
 	</div>
 
-	<div class="contentDisplayer" id="portfolio">
+	<div class="contentDisplayer startup" id="portfolio">
 
 		<div class="contentTitle" id="portfolioTitle">Portfolio</div>
 
@@ -723,7 +684,7 @@
 		<div class="buttonLink buttonHome" id="homePortfolio">Home</div> 
 	</div>
 
-	<div class="contentDisplayer" id="contact">
+	<div class="contentDisplayer startup" id="contact">
 
 		<div class="contentTitle" id="contactTitle">Contact Me</div>
 
@@ -731,9 +692,9 @@
 
 			<form name="contactMe" action="/emailMe.php" method="post">
 				Full Name: <br>
-				<input class="formField" type="text" name="fullName" required> <br>
+				<input class="formField" type="text" name="fullName" required>
 				Email Address: <br>
-				<input class="formField" type="email" name="emailAddress" required> <br>
+				<input class="formField" type="email" name="emailAddress" required>
 				Brief overview of website: <br>
 				<textarea id="textContent" rows="4" name="websiteDetails" form="contactMe" required="required"></textarea>
 				<br>
@@ -784,7 +745,7 @@
    					$("#buttonContact").addClass("slideOutLeftContact");
 				}				
 
-				$("#aboutMe").removeClass("foldAndHide");
+				$("#aboutMe").removeClass("foldAndHide startup");
 				$("#aboutMe").addClass("unfoldAndReveal");
 
 				$(".buttonHome").removeClass("buttonFlasher");
@@ -811,7 +772,7 @@
 					$("#buttonContact").addClass("slideOutLeftContact");
 				}							
 
-				$("#portfolio").removeClass("foldAndHide");
+				$("#portfolio").removeClass("foldAndHide startup");
 				$("#portfolio").addClass("unfoldAndReveal");
 
 				$(".buttonHome").removeClass("buttonFlasher");
@@ -839,7 +800,7 @@
 					$("#buttonContact").addClass("buttonFlasher slideOutLeftContactSelected");
 				}
 
-				$("#contact").removeClass("foldAndHide");
+				$("#contact").removeClass("foldAndHide startup");
 				$("#contact").addClass("unfoldAndReveal");
 
 				$(".buttonHome").removeClass("buttonFlasher");
