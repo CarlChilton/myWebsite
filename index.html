@@ -11,7 +11,7 @@
 	<style type="text/css">
 
 		@keyframes titleBarDropDown {
-			from {top: -10vh;}
+			from {top: -20vh;}
 			to {top: 0vh;}
 		}
 
@@ -197,7 +197,7 @@
 		}
 
 		.contentDisplayer {
-			top: 14vh;
+			top: 16vh;
 			border-style: solid;
 			border-width: 1vw;
 			border-color: black;
@@ -368,6 +368,7 @@
 			background-color: black;
 			color: white;
 			padding: 1vh;
+			resize: none;
 		}
 
 		#contactSubmit {
@@ -436,6 +437,14 @@
 				100% {height: 80vh; top: 14vh; opacity: 1;}
 			}
 
+			@keyframes contentHider {
+
+			30% {height: 10vh; top: 40vh;}
+			60% {height: 10vh; top: 40vh; opacity: 1;}
+			100% {height: 10vh; top: 40vh; opacity: 0; display: none;}
+
+			}
+
     		body {
 				background-clip: padding-box;
 				background-color: black;
@@ -480,7 +489,7 @@
 			}
 
 			.buttonPortfolioSlideIn {
-				left: 100vh;
+				left: 100vw;
 				animation-name: slideInFromRight;
 				animation-duration: 1s;
 				animation-timing-function: ease-out;
@@ -533,24 +542,25 @@
 				margin-left: 4vw;
 				margin-right: 4vw;
 				width: 90vw;
-				height: 78%;
+				height: 80vh;
+
 			}
 
 			/*Continue to review CSS from this point forwards*/
 
 			.contentTitle {
 				border-style: solid;
-				border-width: 5px;
-				font-size: 4vh;
+				border-width: 0.8vw;
+				font-size: 6vh;
 				border-color: black;
 				border-radius: 8px;
 				position: absolute;
-				height: 9vw;
-				width: 102%;
-				left: -1%;
-				top: -5%;
+				height: 13vh;
+				width: 91vw;
+				left: -0.8vw;
+				top: -0.8vw;
 				margin: 0;
-				padding: 1.2vw;
+				padding: 1.2vh;
 				box-sizing: border-box;
 				background-color: #ffaf4d;
 				z-index: 5;
@@ -559,32 +569,35 @@
 
 			.contentContainer {
 				color: white;
-				font-size: 2vw;
+				font-size: 3vh;
 				width: 100%;
-				top: 12%;
-				height: 70%;
+				top: 17%;
+				height: 65%;
 				position: absolute;
 				overflow-y: scroll;
 				text-align: justify;
-				padding-left: 5%;
-				padding-right: 5%;
+				padding-left: 3vw;
+				padding-right: 3vw;
 				display: inline-block;
 				box-sizing: border-box;
 			}
 
 			.buttonHome {
-				border-width: 5px;
+				height: 13%;
 				top: 84%;
-				width: 96%;
-				height: 14%;
 				border-radius: 50px;
-				margin-left: 2%;
-				margin-right: 2%;
+				width: 84vw;
+				margin-left: 3vw;
+				margin-right: 3vw;
 				position: absolute;
 				box-sizing: border-box;
-
-				padding: 5.5%;
+				z-index: 4;
+				padding: 1vh;
+				font-size: 6vh;
+				overflow: hidden;
 			}
+
+
 
 			.slideOutLeftAbout {
 				animation-name: slideOutToLeftAbout;
@@ -621,7 +634,19 @@
 				animation-timing-function: ease-in;
 			}
 
-			
+			.formField {
+				width: 82vw;
+			}			
+
+			textarea {
+				width: 82vw;
+			}
+
+			#contactSubmit {
+				width: 76vw;
+				padding: 1vh;
+				margin-top: 1vh;
+			}
 
 
 		}
