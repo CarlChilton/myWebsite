@@ -77,11 +77,14 @@
 			overflow: hidden;
 		}
 
+		.landing {
+			display: none;
+			opacity: 0;
+		}
+
 		#titleBar {
-			animation-duration: 1s;
-			animation-name: titleBarDropDown;
-			animation-timing-function: ease-out;
-			background-color: #663399;
+			top: -20vh;
+			background: linear-gradient(30deg, #663399, #402060);
 			border-color: black;
 			border-style: solid;
 			border-width: 0px 5px 5px 0px;
@@ -96,7 +99,7 @@
 			width: 100vw;			
 			z-index: 3;
 			padding: 3.2vh;
-			text-shadow: 2px 2px black;
+			text-shadow: 3px 3px black;
 			color: white;
 		}
 
@@ -117,15 +120,22 @@
 			color: white;
 			background-color: #663399;
 			border-radius: 5px;
-			padding: 0.5vh;
+			padding: 0.5vh 1vw 0.1vh 1vw;
 			font-family: Audiowide;
 			box-sizing: border-box;	
 		}
 
 		#title {
-			text-align: center;
-					
+			margin-left: 18vw;				
 			
+		}
+
+		#subtitle {
+			top: -1vh;
+			position: relative;
+			margin-left: 30vw;
+			font-size: 1.7vh;
+			font-weight: lighter;
 		}
 
 		.buttonLink {
@@ -133,7 +143,7 @@
 			border-width: 5px;
 			border-color: black;
 			border-radius: 5px;
-			background-color: #ffaf4d;
+			background-color: #ffaf4d;*/
 			height: 14vh;
 			width: 90%;
 			z-index: 3;
@@ -141,7 +151,7 @@
 			text-align: center;
 			font-family: Audiowide;
 			font-size: 6vh;
-			padding: 3.2vh;
+			padding: 3vh 2vw 3vh 2vw;
 			margin: 0;
 			box-sizing: border-box;
 			line-height: 100%;
@@ -154,6 +164,12 @@
 			border-left: 0px;
 			z-index: 6;
 
+		}
+
+		.titleBarDropDownFromTop {
+			animation-duration: 1s;
+			animation-name: titleBarDropDown;
+			animation-timing-function: ease-out;
 		}
 
 		.buttonAboutSlideIn {
@@ -230,7 +246,11 @@
 			box-sizing: border-box;
 			background-color: #ffaf4d;
 			z-index: 5;
-			font-family: Audiowide;			
+			font-family: Audiowide;		
+		}
+
+		.contentTitle::after {
+			background: ;
 		}
 
 		.contentContainer {
@@ -328,7 +348,8 @@
 		}
 
 		#comingSoonPic {
-			width: 100%;
+			width: 80vh;
+			align-items: center;
 			top: 0px;
 			left: 0px;
 			position: absolute;
@@ -395,12 +416,12 @@
 
     		@keyframes slideInFromLeftContact {
 				from {left:-50vw;}
-				to {left: 30vw;}
+				to {left: 35vw;}
 			}
 
 			@keyframes slideInFromRight {
 				from {left: 100vw;}
-				to {left: 60vw;}
+				to {left: 65vw;}
 			}
 
 			@keyframes slideOutToLeftAbout {
@@ -409,12 +430,12 @@
 			}
 
 			@keyframes slideOutToLeftContact {
-				from {left:30vw;}
+				from {left:35vw;}
 				to {left:-50vw;}
 			}
 
 			@keyframes slideOutToRight {
-				from {left: 60vw;}
+				from {left: 65vw;}
 				to {left: 100vw;}
 			}
 
@@ -439,13 +460,23 @@
 
 			@keyframes contentHider {
 
-			30% {height: 10vh; top: 40vh;}
-			60% {height: 10vh; top: 40vh; opacity: 1;}
-			100% {height: 10vh; top: 40vh; opacity: 0; display: none;}
+				30% {height: 10vh; top: 40vh;}
+				60% {height: 10vh; top: 40vh; opacity: 1;}
+				100% {height: 10vh; top: 40vh; opacity: 0; display: none;}
 
 			}
 
+			@keyframes buttonFlash {
+				0% {background-color: #ffe8cc;}
+				25% {background-color: #ffaf4d;}
+				50% {background-color: #ffe8cc;}
+				75% {background-color: #ffaf4d;}
+				100% {background-color: #ffe8cc; color: #ffe8cc;}
+			
+			}
+
     		body {
+
 				background-clip: padding-box;
 				background-color: black;
 				background-image: url("img/backGround.jpg");
@@ -453,23 +484,22 @@
 				background-repeat: no-repeat;
 				background-size: 150%;
 				overflow: hidden;
+
 			}
 
-    		.buttonLink {    			
+    		.buttonLink { 
 				border-width: 6px;
+				background-color: #ffaf4d;
 				height: 35vh;
 				width: 35vh;
 				font-size: 5vh;
-				padding-top: 13.5vh;
-				padding-bottom: 13.5vh;
-				padding-left: 3vw;
-				padding-right: 3vw;
+				padding: 12vh 2vw 13vh 2vw;
 				overflow: visible;
 			}
 
 			#buttonAbout {
 				border-radius: 150px 150px 150px 150px;
-				border-left: 6px solid;
+				border-left: black 6px solid;
 				top: 20vh;
 				z-index: 6;
 			}
@@ -500,7 +530,7 @@
 			#buttonContact {
 				top: 60vh;
 				border-radius: 150px 150px 150px 150px;
-				border-left: 6px solid;			
+				border-left: black 6px solid;			
 			}
 
 			.buttonContactSlideIn {
@@ -514,19 +544,30 @@
 
 			#logo {
 				margin: 1vh;					
-				height: 10vh;
+				height: 10.5vh;
 				width: 10vw;
+				padding: 0vh 1vw 2vh 1vw;
 			}
 
 			#title {
 				
 				margin:0;
-				text-align: center
+				margin-left: 10vw;
+				text-align: left;
 			} 
+
+			#subtitle {
+				top: -6vh;
+				position: relative;
+				font-size: 3.5vh;
+				margin-left: 55vw;
+				font-weight: lighter;
+			}
 
 			#titleBar {
 				font-size: 6vh;
 				height: 8vh;
+				background: linear-gradient(30deg, #663399, #1a0c27);
 				
 			}	
 
@@ -556,9 +597,9 @@
 				border-radius: 8px;
 				position: absolute;
 				height: 13vh;
-				width: 91vw;
-				left: -0.8vw;
-				top: -0.8vw;
+				width: 90vw;
+				left: -0.85vw;
+				top: -1.2vh;
 				margin: 0;
 				padding: 1.2vh;
 				box-sizing: border-box;
@@ -583,10 +624,11 @@
 			}
 
 			.buttonHome {
+				background-color: #ffaf4d;
 				height: 13%;
 				top: 84%;
 				border-radius: 50px;
-				width: 84vw;
+				width: 82vw;
 				margin-left: 3vw;
 				margin-right: 3vw;
 				position: absolute;
@@ -635,21 +677,344 @@
 			}
 
 			.formField {
-				width: 82vw;
+				width: 80vw;
 			}			
 
 			textarea {
-				width: 82vw;
+				width: 80vw;
 			}
 
 			#contactSubmit {
-				width: 76vw;
+				width: 74vw;
 				padding: 1vh;
 				margin-top: 1vh;
 			}
 
+		}
+
+		@media only screen and (min-width: 768px) {
+    		/* For desktop: */
+
+    		@keyframes slideInFromLeftAbout {
+				from {top: -40vh;}
+				to {top: -2vh;}
+			}
+
+    		@keyframes slideInFromLeftContact {
+				from {top:-40vh;}
+				to {top: -2vh;}
+			}
+
+			@keyframes slideInFromRight {
+				from {top: -40vh;}
+				to {top: -2vh;}
+			}
+
+			@keyframes titleBarSlideUp {
+				from {top: 0vh;}
+				to {top: -40vh;}
+			}
+
+			@keyframes buttonLinkSlideUp {
+				from {top: -2vh;}
+				to {top: -40vh;}
+			}
+
+			@keyframes welcomeFade {
+				from {opacity: 0;}
+				to {opacity: 1;}
+			}
+
+
+
+    		body {
+
+				background-clip: padding-box;
+				background-color: black;
+				background-image: url("img/backGround.jpg");
+				background-position: 100% 0%;
+				background-repeat: no-repeat;
+				background-size: 120%;
+				overflow: hidden;
+
+			}
+
+    		.buttonLink { 
+				border-width: 6px;
+				height: 20vh;
+				width: 14vw;
+				font-size: 3vh;
+				padding: 7vh 1vw 6vh 1vw;
+				overflow: visible;
+				cursor: pointer;
+			}
+
+			.buttonLinkOver { 
+				border-color: black;
+				background-color: #ffe8cc;
+				transition: all 0.4s;
+			}
+
+			.buttonLinkOut {
+				background-color: #ffaf4d;
+				transition: all 0.5s ease-in-out;
+				color: black;
+			}
+
+			.buttonLinkDisappear {
+				top: -2vh;
+				/*left: 50vw;*/
+				animation-name: buttonLinkSlideUp;
+				animation-duration: 2s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			#buttonAbout {
+				border-radius: 0px 0px 30px 30px;
+				border-left: 6px solid;
+				top: -40vh;
+				left: 50vw;
+				z-index: 6;
+			}
+
+			.buttonAboutSlideIn {
+				animation-name: slideInFromLeftAbout;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+				animation-delay: 0.8s;
+				animation-fill-mode: forwards;
+			}
+
+			#buttonPortfolio {
+				top: -40vh;
+				left: 65vw;
+				border-radius: 0px 0px 30px 30px;			
+				z-index: 6;	
+			}
+
+			.buttonPortfolioSlideIn {
+				left: 100vw;
+				animation-name: slideInFromRight;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+				animation-delay: 1.2s;
+				animation-fill-mode: forwards;
+			}
+
+			#buttonContact {
+				top: -40vh;
+				left: 80vw;
+				border-radius: 0px 0px 30px 30px;
+				border-left: 6px solid;			
+			}
+
+			.buttonContactSlideIn {
+				left: -50vw;
+				animation-name: slideInFromLeftContact;
+				animation-duration: 1s;
+				animation-timing-function: ease-out;
+				animation-delay: 1.6s;
+				animation-fill-mode: forwards;
+			}
+
+			#logo {
+				margin: 1vh;					
+				height: 10vh;
+				width: 10vw;
+				padding-top: 0.7vh;
+			}
+
+			#title {
+				
+				margin:0;
+				margin-left: 10vw;
+				text-align: left;
+			} 
+
+			#subtitle {
+				top: -1.5vh;
+				position: relative;
+				font-size: 1.5vh;
+				margin-left: 10.5vw;
+			}
+
+			#titleBar {
+				font-size: 6vh;
+				height: 8vh;
+				background: linear-gradient(30deg, #663399, #1a0c27);
+				
+			}	
+
+			.titleBarDisappear {
+				animation-name: titleBarSlideUp;
+				animation-duration: 2s;
+				animation-timing-function: ease-in;
+				/*animation-delay: 1.6s;*/
+				animation-fill-mode: forwards;
+			}
+
+			.portfolioWobble {
+				animation-name: portfolioWobbler;
+				animation-delay: 2.5s;
+				animation-duration: 4s;
+				animation-timing-function: ease-in;
+				animation-iteration-count: infinite;
+			}
+
+			.contentDisplayer {
+				margin-left: 4vw;
+				margin-right: 4vw;
+				width: 90vw;
+				height: 80vh;
+
+			}
+
+			/*Continue to review CSS from this point forwards*/
+
+			.contentTitle {
+				border-style: solid;
+				border-width: 0.8vw;
+				font-size: 6vh;
+				border-color: black;
+				border-radius: 8px;
+				position: absolute;
+				height: 13vh;
+				width: 90vw;
+				left: -0.85vw;
+				top: -1.2vh;
+				margin: 0;
+				padding: 1.2vh;
+				box-sizing: border-box;
+				background-color: #ffaf4d;
+				z-index: 5;
+				font-family: Audiowide;
+			}
+
+			.contentContainer {
+				color: white;
+				font-size: 3vh;
+				width: 100%;
+				top: 17%;
+				height: 65%;
+				position: absolute;
+				overflow-y: scroll;
+				text-align: justify;
+				padding-left: 3vw;
+				padding-right: 3vw;
+				display: inline-block;
+				box-sizing: border-box;
+			}
+
+			.buttonHome {
+				background-color: #ffaf4d;
+				height: 13%;
+				top: 84%;
+				border-radius: 50px;
+				width: 82vw;
+				margin-left: 3vw;
+				margin-right: 3vw;
+				position: absolute;
+				box-sizing: border-box;
+				z-index: 4;
+				padding: 1vh;
+				font-size: 6vh;
+				overflow: hidden;
+			}
+
+
+
+			.slideOutLeftAbout {
+				animation-name: slideOutToLeftAbout;
+				animation-duration: 1.2s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			.slideOutLeftContact {
+				animation-name: slideOutToLeftContact;
+				animation-duration: 1s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+			
+			.slideOutLeftAboutSelected {
+				animation-name: slideOutToLeftAbout, buttonFlash;
+				animation-duration: 1.5s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			.slideOutLeftContactSelected {
+				animation-name: slideOutToLeftContact, buttonFlash;
+				animation-duration: 1.5s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			.slideOutRightSelected {
+				animation-name: slideOutToRight, buttonFlash;
+				animation-duration: 1.5s;
+				animation-fill-mode: forwards;
+				animation-timing-function: ease-in;
+			}
+
+			.formField {
+				width: 80vw;
+			}			
+
+			textarea {
+				width: 80vw;
+			}
+
+			#contactSubmit {
+				width: 74vw;
+				padding: 1vh;
+				margin-top: 1vh;
+			}
+
+			.welcomeContainer {
+				width: 100vw;
+			}
+
+			.landing {
+				display: block;
+				position: absolute;
+				width: 100vw;
+				font-family: Audiowide;
+				text-align: center;
+				color: white;
+				text-shadow: 5px 0 2px black, -5px 0 2px black, 0 5px 2px black, 0 -5px 2px black, 3px 3px 2px black, -3px -3px 2px black, -3px 3px 2px black, 3px -3px 2px black;
+			}
+
+			.welcomeAppear {
+				animation-name: welcomeFade;
+				animation-duration: 4s;
+				animation-fill-mode: forwards;
+			}
+
+			.welcomeDisappear {
+				animation-name: welcomeFade;
+				animation-duration: 2s;
+				animation-direction: reverse;
+				animation-fill-mode: forwards;
+			}
+
+			.welcome {
+
+				top: 30vh;				
+				font-size: 12vh;
+				z-index: 2;
+			}
+
+			.direction {
+				top: 52vh;
+				color: white;
+				font-size: 3vh;
+			}
 
 		}
+
 
 
 	</style>
@@ -665,9 +1030,15 @@
 
 	</nav>
 
-	<div id="titleBar">
+	<div id="titleBar" class="titleBarDropDownFromTop">
 		<div id="logo">CC</div>
-		<div id="title">Creative Design</div>
+		<div id="title">Creative</div>
+		<div id="subtitle">Website design and development</div>
+	</div>
+
+	<div class="welcomeContainer"> 
+		<p class="landing welcome welcomeAppear">Welcome</p>
+		<p class="landing direction welcomeAppear">Please use the buttons at the top to explore the site</p>
 	</div>
 	<div class="contentDisplayer startup" id="aboutMe">
 
@@ -738,6 +1109,9 @@
 
 			function bringBackHome() {
 
+					$("#titleBar").removeClass("titleBarDisappear");
+					$("#titleBar").addClass("titleBarDropDownFromTop");
+
 					$("#buttonAbout").removeClass("slideOutLeft slideOutLeftAbout slideOutLeftAboutSelected buttonFlasher slideOutLeftSelected");
 					$("#buttonAbout").addClass("buttonAboutSlideIn");
 
@@ -751,12 +1125,18 @@
 
 			$("#buttonAbout").click(function() {
 
+				$(".landing").removeClass("welcomeAppear");
+				$(".landing").addClass("welcomeDisappear");
+
 				$("#buttonAbout").removeClass("buttonAboutSlideIn");
 
 				if ($(window).width() < 600) {
 					$("#buttonAbout").addClass("buttonFlasher slideOutLeftSelected");
-				} else {
+				} else if ($(window).width() < 768) {
 					$("#buttonAbout").addClass("buttonFlasher slideOutLeftAboutSelected");
+				} else {
+					$("#buttonAbout").addClass("buttonFlasher buttonLinkDisappear");
+					$("#titleBar").addClass("titleBarDisappear");
 				}
 
 				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
@@ -766,9 +1146,11 @@
 
 				if ($(window).width() < 600) {
    					$("#buttonContact").addClass("slideOutLeft");
-				} else {
+				} else if ($(window).width() < 768) {
    					$("#buttonContact").addClass("slideOutLeftContact");
-				}				
+				} else {
+					$("#buttonContact").addClass("buttonLinkDisappear")
+				}
 
 				$("#aboutMe").removeClass("foldAndHide startup");
 				$("#aboutMe").addClass("unfoldAndReveal");
@@ -783,7 +1165,7 @@
 
 				if ($(window).width() < 600) {
 					$("#buttonAbout").addClass("slideOutLeft");	
-				} else {
+				} else if ($(window).width() < 768) {
 					$("#buttonAbout").addClass("slideOutLeftAbout");	
 				}				
 
@@ -793,7 +1175,7 @@
 				$("#buttonContact").removeClass("buttonContactSlideIn");
 				if ($(window).width() < 600) {
 					$("#buttonContact").addClass("slideOutLeft");	
-				} else {
+				} else if ($(window).width() < 768) {
 					$("#buttonContact").addClass("slideOutLeftContact");
 				}							
 
@@ -810,7 +1192,7 @@
 
 				if ($(window).width() < 600) {
 					$("#buttonAbout").addClass("slideOutLeft");	
-				} else {
+				} else if ($(window).width() < 768) {
 					$("#buttonAbout").addClass("slideOutLeftAbout");	
 				}	
 
@@ -821,7 +1203,7 @@
 
 				if ($(window).width() < 600) {
 					$("#buttonContact").addClass("buttonFlasher slideOutLeftSelected");
-				} else {
+				} else if ($(window).width() < 768) {
 					$("#buttonContact").addClass("buttonFlasher slideOutLeftContactSelected");
 				}
 
@@ -845,7 +1227,7 @@
 
 			$("#homePortfolio").click(function() {
 
-				$("#homePortfolio").addClass("buttonFlasher");
+				$("#homePortfolio").addClass("buttonFlasher homeCollapse");
 
 				$("#portfolio").removeClass("unfoldAndReveal");
 				$("#portfolio").addClass("foldAndHide");
@@ -856,7 +1238,7 @@
 
 			$("#homeContact").click(function() {
 
-				$("#homeContact").addClass("buttonFlasher");
+				$("#homeContact").addClass("buttonFlasher homeCollapse");
 
 				$("#contact").removeClass("unfoldAndReveal");
 				$("#contact").addClass("foldAndHide");
@@ -865,7 +1247,19 @@
 
 			});		
 
+			$(".buttonLink").mouseover(function() {
+				$(this).removeClass("buttonLinkOut");
+				$(this).addClass("buttonLinkOver");
 
+			});
+
+			$(".buttonLink").mouseout(function() {
+				$(".buttonLink").removeClass("buttonLinkOver");
+				$(".buttonLink").addClass("buttonLinkOut");
+				
+			});
+
+			
 
 		}); 		
 
