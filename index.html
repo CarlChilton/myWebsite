@@ -10,38 +10,13 @@
 
 	<style type="text/css">
 
-		@keyframes titleBarDropDown {
-			from {top: -20vh;}
-			to {top: 0vh;}
-		}
-
-		@keyframes slideInFromLeft {
-			from {left:-100vw;}
-			to {left:0vw;}
-		}
-
-		@keyframes slideOutToLeft {
-			from {left:0vw;}
-			to {left:-100vw;}
-		}
-
-		@keyframes slideInFromRight {
-			from {left: 100vw;}
-			to {left: 15vw;}
-		}
-
-		@keyframes slideOutToRight {
-			from {left: 15vw;}
-			to {left: 100vw;}
-		}
-
 		@keyframes buttonFlash {
 			0% {background-color: #ffe8cc;}
-			25% {background-color: #ffaf4d;}
-			50% {background-color: #ffe8cc;}
-			75% {background-color: #ffaf4d; color: black;}
-			100% {background-color: #ffe8cc; color: #ffe8cc;}
-			
+			20% {background-color: #ffaf4d;}
+			40% {background-color: #ffe8cc;}
+			60% {background-color: #ffaf4d;}
+			80% {background-color: #ffe8cc; color: black}
+			100% {background-color: #ffaf4d; color: #ffe8cc;}
 		}
 
 		@keyframes contentHider {
@@ -56,6 +31,13 @@
 
 			from {height: 14vh, top: 82%;}
 			to {height: 2vh, top: 0%;}
+
+		}
+
+		@keyframes homeExpander {
+
+				from {height: 2vh, top: 0%;}
+				to {height: 14vh, top: 82%;}
 
 		}
 
@@ -83,7 +65,7 @@
 		}
 
 		#titleBar {
-			top: -20vh;
+			top: 0vh;
 			background: linear-gradient(30deg, #663399, #402060);
 			border-color: black;
 			border-style: solid;
@@ -116,7 +98,6 @@
 			position: absolute;
 			object-fit: contain;
 			text-align: center;
-			/*line-height: 10vw;*/
 			color: white;
 			background-color: #663399;
 			border-radius: 5px;
@@ -158,77 +139,49 @@
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
+
 		#buttonAbout {
 			top: 20vh;
+			left: 0vw;
 			border-radius: 0px 50px 50px 0px;
 			border-left: 0px;
 			z-index: 6;
 
 		}
 
-		.titleBarDropDownFromTop {
-			animation-duration: 1s;
-			animation-name: titleBarDropDown;
-			animation-timing-function: ease-out;
-		}
-
-		.buttonAboutSlideIn {
-			left: 0vw;
-			animation-name: slideInFromLeft;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			animation-delay: 0.8s;
-			animation-fill-mode: forwards;
-		}
-
 		#buttonPortfolio {
-			top: 45vh;			
+			top: 45vh;		
+			left: 15vw;	
 			border-radius: 50px 0px 0px 50px;			
 			z-index: 6;	
 		}
 
-		.buttonPortfolioSlideIn {
-			left: 15vw;	
-			animation-name: slideInFromRight;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			animation-delay: 1.2s;
-			animation-fill-mode: forwards;
-
-		}
 		#buttonContact {
 			top: 70vh;
+			left: 0vw;
 			border-radius: 0px 50px 50px 0px;
 			border-left: 0;			
 			z-index: 6;
 		}
 
-		.buttonContactSlideIn {
-			left: 0vw;
-			animation-name: slideInFromLeft;
-			animation-duration: 1s;
-			animation-timing-function: ease-out;
-			animation-delay: 1.6s;
-			animation-fill-mode: forwards;
-		}
-
 		.contentDisplayer {
 			top: 16vh;
+			height: 13vh;
 			border-style: solid;
-			border-width: 1vw;
+			border-top: 0px;
+			border-width: 1.2vw;
 			border-color: black;
 			border-radius: 8px 8px 50px 50px;
 			background: rgba(0, 0, 0, 0.7);
 			opacity: 0;
-			width: 90vw;
-			margin: 3vw;
+			width: 90.6vw;
+			margin: 2vh 3vw 0vh 3vw;
 			z-index: 4;
 			position: absolute;
 			text-align: center;
 			font-family: Aldrich;
 			font-size: 6vh;
 			box-sizing: border-box;
-			display: flex;
 		}
 
 		.contentTitle {
@@ -238,19 +191,15 @@
 			border-radius: 8px;
 			position: absolute;
 			height: 13vh;
-			width: 90vw;
-			left: -0.8vw;
-			top: -0.8vh;
+			width: 90.6vw;
+			left: -1vw;
+			top: 0vh;
 			margin: 0vh;
 			padding: 1.8vh;
 			box-sizing: border-box;
 			background-color: #ffaf4d;
 			z-index: 5;
 			font-family: Audiowide;		
-		}
-
-		.contentTitle::after {
-			background: ;
 		}
 
 		.contentContainer {
@@ -264,8 +213,8 @@
 			text-align: justify;
 			padding-left: 5vw;
 			padding-right: 5vw;
+			margin: 0;
 			padding-top: 0;
-			display: inline-block;
 			box-sizing: border-box;
 		}
 
@@ -276,6 +225,7 @@
 			width: 80vw;
 			margin-left: 4vw;
 			margin-right: 4vw;
+			margin-bottom: 3vh;
 			position: absolute;
 			box-sizing: border-box;
 			z-index: 4;
@@ -285,7 +235,7 @@
 
 		.buttonFlasher {
 			animation-name: buttonFlash;
-			animation-duration: 0.8s;
+			animation-duration: 1.2s;
 			animation-fill-mode: forwards;
 
 		}
@@ -301,15 +251,26 @@
 			display: none;
 		}
 
+		/*.foldAndHidePreDelay {
+			height: 80vh;
+		}
+
 		.foldAndHide {
 			opacity: 1;
 			top: 14vh;
-			height: 80vh;
 			animation-delay: 0.8s;
 			animation-name: contentHider;
 			animation-duration: 2s;
 			animation-fill-mode: forwards;
 		}
+
+		.homeCollapse {
+			animation-delay: 0.8s;
+			animation-name: homeCollapser;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}
+
 
 		.unfoldAndReveal {
 			
@@ -318,6 +279,16 @@
 			animation-duration: 2s;
 			animation-fill-mode: forwards;
 		}
+
+		.homeExpand {
+			/*top: 82%;
+			animation-delay: 1.5s;
+			animation-name: homeExpander;
+			animation-duration: 2s;
+			animation-fill-mode: forwards;
+		}*/
+
+		/*
 
 		.slideOutLeft {
 			animation-name: slideOutToLeft;
@@ -345,7 +316,7 @@
 			animation-duration: 1.5s;
 			animation-fill-mode: forwards;
 			animation-timing-function: ease-in;
-		}
+		} */
 
 		#comingSoonPic {
 			width: 80vh;
@@ -409,7 +380,7 @@
 		@media only screen and (min-width: 600px) {
     		/* For tablets: */
 
-    		@keyframes slideInFromLeftAboutTablet {
+    		/*@keyframes slideInFromLeftAboutTablet {
 				from {left:-50vw;}
 				to {left: 15vw;}
 			}
@@ -437,7 +408,7 @@
 			@keyframes slideOutToRightTablet {
 				from {left: 65vw;}
 				to {left: 100vw;}
-			}
+			} */
 
 			@keyframes portfolioWobbler {
 				12.5% {top: 35.2%;}
@@ -460,6 +431,7 @@
 
 			@keyframes contentHider {
 
+				0% {height: 80vh;}
 				30% {height: 10vh; top: 40vh;}
 				60% {height: 10vh; top: 40vh; opacity: 1;}
 				100% {height: 10vh; top: 40vh; opacity: 0; display: none;}
@@ -493,7 +465,7 @@
 				height: 35vh;
 				width: 35vh;
 				font-size: 5vh;
-				padding: 12vh 2vw 13vh 2vw;
+				padding: 13vh 2vw 13vh 2vw;
 				overflow: visible;
 			}
 
@@ -501,9 +473,11 @@
 				border-radius: 150px 150px 150px 150px;
 				border-left: black 6px solid;
 				top: 20vh;
+				left: 15vw;
 				z-index: 6;
 			}
 
+			/*
 			.buttonAboutSlideInTablet {
 				left: 15vw;
 				animation-name: slideInFromLeftAboutTablet;
@@ -511,14 +485,16 @@
 				animation-timing-function: ease-out;
 				animation-delay: 0.8s;
 				animation-fill-mode: forwards;
-			}
+			}*/
 
 			#buttonPortfolio {
 				top: 32vh;			
+				left: 62vw;
 				border-radius: 150px 150px 150px 150px;			
 				z-index: 6;	
 			}
 
+			/*
 			.buttonPortfolioSlideInTablet {
 				left: 62vw;
 				animation-name: slideInFromRightTablet;
@@ -526,13 +502,16 @@
 				animation-timing-function: ease-out;
 				animation-delay: 1.2s;
 				animation-fill-mode: forwards;
-			}
+			}*/
 
 			#buttonContact {
 				top: 60vh;
+				left: 35vw;
 				border-radius: 150px 150px 150px 150px;
 				border-left: black 6px solid;			
 			}
+
+			/*
 
 			.buttonContactSlideInTablet {
 				left: 35vw;
@@ -542,6 +521,7 @@
 				animation-delay: 1.6s;
 				animation-fill-mode: forwards;
 			}
+			*/
 
 			#logo {
 				margin: 1vh;					
@@ -558,7 +538,7 @@
 			} 
 
 			#subtitle {
-				top: -5vh;
+				top: -6vh;
 				position: relative;
 				font-size: 2vw;
 				margin-left: 55vw;
@@ -580,15 +560,12 @@
 				animation-iteration-count: infinite;
 			}
 
-			.contentDisplayer {
-				margin-left: 4vw;
-				margin-right: 4vw;
+			/*.contentDisplayer {
+				margin: 4vh 4vw 1vh 4vw;
 				width: 90vw;
 				height: 80vh;
 
-			}
-
-			/*Continue to review CSS from this point forwards*/
+			}*/
 
 			.contentTitle {
 				border-style: solid;
@@ -614,7 +591,7 @@
 				font-size: 3vh;
 				width: 100%;
 				top: 17%;
-				height: 65%;
+				height: 60%;
 				position: absolute;
 				overflow-y: scroll;
 				text-align: justify;
@@ -627,21 +604,22 @@
 			.buttonHome {
 				background-color: #ffaf4d;
 				height: 13%;
-				top: 84%;
+				top: 82%;
 				border-radius: 50px;
 				width: 82vw;
 				margin-left: 3vw;
 				margin-right: 3vw;
+				margin-bottom: 3vh;
 				position: absolute;
 				box-sizing: border-box;
 				z-index: 4;
-				padding: 1vh;
+				padding: 0.5vh;
 				font-size: 6vh;
 				overflow: hidden;
 			}
 
 
-
+/*
 			.slideOutLeftAboutTablet {
 				animation-name: slideOutToLeftAboutTablet;
 				animation-duration: 1.2s;
@@ -682,7 +660,7 @@
 				animation-duration: 1.5s;
 				animation-fill-mode: forwards;
 				animation-timing-function: ease-in;
-			}
+			} */
 
 			.formField {
 				width: 80vw;
@@ -703,7 +681,7 @@
 		@media only screen and (min-width: 768px) {
     		/* For desktop: */
 
-    		@keyframes slideInFromLeftAbout {
+    		/*@keyframes slideInFromLeftAbout {
 				from {top: -40vh;}
 				to {top: -2vh;}
 			}
@@ -726,7 +704,7 @@
 			@keyframes buttonLinkSlideUp {
 				from {top: -2vh;}
 				to {top: -40vh;}
-			}
+			}*/
 
 			@keyframes welcomeFade {
 				from {opacity: 0;}
@@ -735,6 +713,7 @@
 
 			@keyframes contentHider {
 
+				0% {height: 90vh; top: 2vh;}
 				30% {height: 2vh; top: 40vh;}
 				60% {height: 2vh; top: 40vh; opacity: 1;}
 				100% {height: 2vh; top: 40vh; opacity: 0; display: none;}
@@ -748,12 +727,19 @@
 
 			}
 
+			@keyframes homeExpander {
+
+				from {height: 2vh, top: 0%;}
+				to {height: 14vh, top: 88%;}
+
+			}
+
 			@keyframes contentReveal {
 
 				0% {height: 10vh; top: 40vh; opacity: 0; display: inline;}
 				40% {height: 10vh; top: 40vh; opacity: 1;}
-				70% {height: 90vh; top: 2vh; opacity: 1;}
-				100% {height: 90vh; top: 2vh; opacity: 1;}
+				70% {height: 90vh; top: 1vh; opacity: 1;}
+				100% {height: 90vh; top: 1vh; opacity: 1;}
 			}
 
     		body {
@@ -807,14 +793,14 @@
 				z-index: 6;
 			}
 
-			.buttonAboutSlideIn {
+			/*.buttonAboutSlideIn {
 				left: 50vw;
 				animation-name: slideInFromLeftAbout;
 				animation-duration: 1s;
 				animation-timing-function: ease-out;
 				animation-delay: 0.8s;
 				animation-fill-mode: forwards;
-			}
+			}*/
 
 			#buttonPortfolio {
 				top: -2vh;
@@ -823,14 +809,16 @@
 				z-index: 6;	
 			}
 
+			/*
+
 			.buttonPortfolioSlideIn {
-				/*left: 100vw;*/
+				/*left: 100vw;
 				animation-name: slideInFromRight;
 				animation-duration: 1s;
 				animation-timing-function: ease-out;
 				animation-delay: 1.2s;
 				animation-fill-mode: forwards;
-			}
+			} */
 
 			#buttonContact {
 				top: -2vh;
@@ -839,14 +827,16 @@
 				border-left: 6px solid;			
 			}
 
+			/*
+
 			.buttonContactSlideIn {
-				left: -50vw;
+				/*left: -50vw;
 				animation-name: slideInFromLeftContact;
 				animation-duration: 1s;
 				animation-timing-function: ease-out;
 				animation-delay: 1.6s;
 				animation-fill-mode: forwards;
-			}
+			} */
 
 			#logo {
 				margin: 1vh;					
@@ -892,7 +882,7 @@
 				animation-iteration-count: infinite;
 			}
 
-			.contentDisplayer {
+			/*.contentDisplayer {
 				position: absolute;
 				margin-left: 4vw;
 				margin-right: 4vw;
@@ -900,7 +890,7 @@
 				height: 80vh;
 				border-width: 0.6vw;
 
-			}
+			}*/)
 
 			/*Continue to review CSS from this point forwards*/
 
@@ -941,7 +931,6 @@
 			.buttonHome {
 				background-color: #ffaf4d;
 				height: 10%;
-				top: 88%;
 				border-radius: 50px;
 				width: 74vw;
 				margin-left: 8vw;
@@ -954,7 +943,7 @@
 				overflow: hidden;
 			}
 
-
+			/*
 
 			.slideOutLeftAboutDesktop {
 				animation-name: slideOutToLeftAbout;
@@ -991,6 +980,8 @@
 				animation-timing-function: ease-in;
 			}
 
+			*/
+
 			.formField {
 				width: 80vw;
 			}			
@@ -1003,6 +994,12 @@
 				width: 74vw;
 				padding: 1vh;
 				margin-top: 1vh;
+			}
+
+			.foldAndHide {
+
+				top: 1vh;
+				height: 90vh;
 			}
 
 			.welcomeContainer {
@@ -1056,7 +1053,7 @@
 
 	<nav>
 			
-		<div class="buttonLink buttonAboutSlideIn buttonAboutSlideInTablet" id="buttonAbout">About</div>
+		<div class="buttonLink buttonAboutSlideIn buttonSlideInLeftPreDelay buttonAboutSlideInTablet" id="buttonAbout">About</div>
 		<div class="buttonLink buttonPortfolioSlideIn buttonPortfolioSlideInTablet" id="buttonPortfolio">Portfolio</div>
 		<div class="buttonLink buttonContactSlideIn buttonContactSlideInTablet" id="buttonContact">Contact</div>
 
@@ -1076,8 +1073,10 @@
 
 		<div class="contentTitle" id="aboutMeTitle">About Me</div>
 
-		<div class="contentContainer" id="aboutMeContainer">
-			<p>My name is Carl Chilton. I have much exposure to the IT industry. I worked as an desktop, network and server engineer for 10 
+		<div class="contentAndHome">
+
+			<div class="contentContainer" id="aboutMeContainer">
+				<p>My name is Carl Chilton. I have much exposure to the IT industry. I worked as an desktop, network and server engineer for 10 
 			years.			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -1093,11 +1092,13 @@
 			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.	</p>
+			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 	</p>
 			 
-		</div>
+			</div>
 
-		<div class="buttonLink buttonHome" id="homeAbout">Home</div> 
+			<div class="buttonLink buttonHome homeCollapse" id="homeAbout">Home</div> 
+
+		</div>
 	</div>
 
 	<div class="contentDisplayer startup" id="portfolio">
@@ -1139,84 +1140,140 @@
 
 		$(document).ready(function() {
 
-			function bringBackHome() {
+			var iAmHome = true;
+			var currentScreen = "home"
 
-					$("#titleBar").removeClass("titleBarDisappear");
-					$("#titleBar").addClass("titleBarDropDownFromTop");
+			bringItHome();
 
-					$("#buttonAbout").removeClass("slideOutLeft slideOutLeftAbout slideOutLeftAboutSelected buttonFlasher slideOutLeftSelected slideOutLeftAboutTablet slideOutLeftAboutSelectedTablet");
-					$("#buttonAbout").addClass("buttonAboutSlideIn buttonAboutSlideInTablet");
+			$(".contentDisplayer").css({"height":"13vh", "display":"none", "opacity":"0", "top":"36vh"});
+			$("#titleBar").css({"top":"-20vh"});
+			/*$(".contentAndHome").css({"top":"0%", "height":"2vh"});*/
 
-					$("#buttonPortfolio").removeClass("slideOutRight buttonFlasher slideOutRightSelected slideOutRightTablet slideOutRightSelectedTablet");
-					$("#buttonPortfolio").addClass("buttonPortfolioSlideIn buttonPortfolioSlideInTablet");
+			if ($(window).width() < 600) {
+				$("#buttonAbout").css({"left":"-100vw"});
+				$("#buttonContact").css({"left":"-100vw"});
+				$("#buttonPortfolio").css({"left":"115vw"});				
+			} else if ($(window).width() < 768) {
+				$("#buttonAbout").css({"left":"-100vw"});
+				$("#buttonContact").css({"left":"-100vw"});
+				$("#buttonPortfolio").css({"left":"115vw"})
+			} else {
+				$("#buttonAbout").css({"top":"-20vh"});
+				$("#buttonContact").css({"top":"-20vh"});
+				$("#buttonPortfolio").css({"top":"-20vh"})
+			}
 
-					$("#buttonContact").removeClass("slideOutLeft slideOutLeftContact buttonFlasher slideOutLeftSelected slideOutLeftContactSelected slideOutLeftContactTablet slideOutLeftContactSelectedTablet");
-					$("#buttonContact").addClass("buttonContactSlideIn buttonContactSlideInTablet");
+			function aboutButtonShow() {
+
+				if ($(window).width() < 600) {
+					$("#buttonAbout").css({"left":"-100vw"}).animate({"left":"0vw"}, 1000);
+				} else if ($(window).width() < 768) {
+					$("#buttonAbout").css({"left":"-50vw"}).animate({"left":"15vw"}, 1000);
+				} else {
+					$("#buttonAbout").css({"top":"-20vh"}).animate({"top":"-2vh"}, 1000);
+				}	
+
+			};			
+
+			function portfolioButtonShow() {
+
+				if ($(window).width() < 600) {
+					$("#buttonPortfolio").css({"left":"115vw"}).animate({"left":"15vw"}, 1000);
+				} else if ($(window).width() < 768) {
+					$("#buttonPortfolio").css({"left":"115vw"}).animate({"left":"62vw"}, 1000);
+				} else {
+					$("#buttonPortfolio").css({"top":"-20vh"}).animate({"top":"-2vh"}, 1000);
+				}				
+
+			};
+
+			function contactButtonShow() {
+
+				if ($(window).width() < 600) {
+					$("#buttonContact").css({"left":"-100vw"}).animate({"left":"0vw"}, 1000);
+				} else if ($(window).width() < 768) {
+					$("#buttonContact").css({"left":"-50vw"}).animate({"left":"35vw"}, 1000);
+				} else {
+					$("#buttonContact").css({"top":"-20vh"}).animate({"top":"-2vh"}, 1000);
+				}				
+
+			};
+
+			function titleBarShow() {
+
+				$("#titleBar").css({"top":"-20vh"}).animate({"top":"0vw"}, 1000);
+
+			};
+
+			function bringItHome() {
+
+				titleBarShow();
+				setTimeout(aboutButtonShow, 800);
+				setTimeout(portfolioButtonShow, 1200);
+				setTimeout(contactButtonShow, 1600);
 
 			};
 
 			$("#buttonAbout").click(function() {
 
-				$(".landing").removeClass("welcomeAppear");
-				$(".landing").addClass("welcomeDisappear");
+				if (iAmHome) {
 
-				$("#buttonAbout").removeClass("buttonAboutSlideIn buttonAboutSlideInTablet");
+					iAmHome = false;
+					currentScreen = "about";
+					$("#aboutMe").css({"display":"inline"});
+					$("#buttonAbout").addClass("buttonFlasher");
+					if ($(window).width() < 600) {
+						$("#buttonAbout").css({"left":"0vw"}).animate({"left":"-100vw"}, 1800);
+						$("#buttonPortfolio").css({"left":"15vw"}).animate({"left":"115vw"}, 1000);
+						$("#buttonContact").css({"left":"0vw"}).animate({"left":"-100vw"}, 1000);
+						$("#aboutMe").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#aboutMe").css({"height":"13vh", "top":"36vh", "border-radius":"8px"}).delay(1000).animate({"height":"80vh", "top":"14vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
+						$(".buttonHome").css({"top":"10%"}).animate({"top":"82%"});		
+						/*$(".contentAndHome").css({"top":"0%", "height":"2vh"}).animate({"top":"18%", "height":"65vh"});*/
+					} else if ($(window).width() < 768) {
+						$("#buttonAbout").css({"left":"15vw"}).animate({"left":"-50vw"}, 1800);
+						$("#buttonPortfolio").css({"left":"62vw"}).animate({"left":"115vw"}, 1000);
+						$("#buttonContact").css({"left":"35vw"}).animate({"left":"-50vw"}, 1000);
+					} else {
+						$("#buttonAbout").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#buttonPortfolio").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#buttonContact").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#titleBar").css({"top":"0vh"}).animate({"top":"-20vw"}, 1000);
+					}
 
-				if ($(window).width() < 600) {
-					$("#buttonAbout").addClass("buttonFlasher slideOutLeftSelected");
-				} else if ($(window).width() < 768) {
-					$("#buttonAbout").addClass("buttonFlasher slideOutLeftAboutSelectedTablet");
-				} else {
-					$("#buttonAbout").addClass("buttonFlasher buttonLinkDisappear");
-					$("#titleBar").addClass("titleBarDisappear");
-				}
-
-				$("#buttonPortfolio").removeClass("buttonPortfolioSlideInTablet buttonPortfolioSlideIn");
-				
-				if ($(window).width() < 600) {
-   					$("#buttonPortfolio").addClass("slideOutRight");
-				} else if ($(window).width() < 768) {
-   					$("#buttonPortfolio").addClass("slideOutRightTablet");
-				} else {
-					$("#buttonPortfolio").addClass("buttonLinkDisappear")
-				}
-
-				$("#buttonContact").removeClass("buttonContactSlideIn buttonContactSlideInTablet");	
-
-				if ($(window).width() < 600) {
-   					$("#buttonContact").addClass("slideOutLeft");
-				} else if ($(window).width() < 768) {
-   					$("#buttonContact").addClass("slideOutLeftContactTablet");
-				} else {
-					$("#buttonContact").addClass("buttonLinkDisappear")
-				}
+				}				
 
 				$("#aboutMe").removeClass("foldAndHide startup");
 				$("#aboutMe").addClass("unfoldAndReveal");
 
-				$(".buttonHome").removeClass("buttonFlasher");
+				$(".buttonHome").removeClass("buttonFlasher homeCollapse");
+				$(".buttonHome").addClass("homeExpand");
 
 			});
 
 			$("#buttonPortfolio").click(function() {
 
-				$("#buttonAbout").removeClass("buttonAboutSlideIn");
+				if (iAmHome) {
 
-				if ($(window).width() < 600) {
-					$("#buttonAbout").addClass("slideOutLeftAbout");	
-				} else if ($(window).width() < 768) {
-					$("#buttonAbout").addClass("slideOutLeftAboutTablet");	
+					iAmHome = false;
+					currentScreen = "portfolio";
+					$("#buttonPortfolio").addClass("buttonFlasher");
+					if ($(window).width() < 600) {
+						$("#buttonAbout").css({"left":"0vw"}).animate({"left":"-100vw"}, 1000);
+						$("#buttonPortfolio").css({"left":"15vw"}).animate({"left":"115vw"}, 1800);
+						$("#buttonContact").css({"left":"0vw"}).animate({"left":"-100vw"}, 1000);
+					} else if ($(window).width() < 768) {
+						$("#buttonAbout").css({"left":"15vw"}).animate({"left":"-50vw"}, 1000);
+						$("#buttonPortfolio").css({"left":"62vw"}).animate({"left":"115vw"}, 1800);
+						$("#buttonContact").css({"left":"35vw"}).animate({"left":"-50vw"}, 1000);
+					} else {
+						$("#buttonAbout").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#buttonPortfolio").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#buttonContact").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#titleBar").css({"top":"0vh"}).animate({"top":"-20vw"}, 1000);
+					}
+
 				}				
-
-				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
-				$("#buttonPortfolio").addClass("buttonFlasher slideOutRightSelected");
-
-				$("#buttonContact").removeClass("buttonContactSlideIn");
-				if ($(window).width() < 600) {
-					$("#buttonContact").addClass("slideOutLeftAbout");	
-				} else if ($(window).width() < 768) {
-					$("#buttonContact").addClass("slideOutLeftContactTablet");
-				}							
 
 				$("#portfolio").removeClass("foldAndHide startup");
 				$("#portfolio").addClass("unfoldAndReveal");
@@ -1227,24 +1284,27 @@
 
 			$("#buttonContact").click(function() {
 
-				$("#buttonAbout").removeClass("buttonAboutSlideIn");
+				if (iAmHome) {
 
-				if ($(window).width() < 600) {
-					$("#buttonAbout").addClass("slideOutLeft");	
-				} else if ($(window).width() < 768) {
-					$("#buttonAbout").addClass("slideOutLeftAboutTablet");	
-				}	
+					iAmHome = false;
+					currentScreen = "contact";
+					$("#buttonContact").addClass("buttonFlasher");
+					if ($(window).width() < 600) {
+						$("#buttonAbout").css({"left":"0vw"}).animate({"left":"-100vw"}, 1000);
+						$("#buttonPortfolio").css({"left":"15vw"}).animate({"left":"115vw"}, 1000);
+						$("#buttonContact").css({"left":"0vw"}).animate({"left":"-100vw"}, 1800);
+					} else if ($(window).width() < 768) {
+						$("#buttonAbout").css({"left":"15vw"}).animate({"left":"-50vw"}, 1000);
+						$("#buttonPortfolio").css({"left":"62vw"}).animate({"left":"115vw"}, 1000);
+						$("#buttonContact").css({"left":"35vw"}).animate({"left":"-50vw"}, 1800);
+					} else {
+						$("#buttonAbout").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#buttonPortfolio").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#buttonContact").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
+						$("#titleBar").css({"top":"0vh"}).animate({"top":"-20vw"}, 1000);
+					}
 
-				$("#buttonPortfolio").removeClass("buttonPortfolioSlideIn");
-				$("#buttonPortfolio").addClass("slideOutRight");
-
-				$("#buttonContact").removeClass("buttonContactSlideIn");		
-
-				if ($(window).width() < 600) {
-					$("#buttonContact").addClass("buttonFlasher slideOutLeftSelected");
-				} else if ($(window).width() < 768) {
-					$("#buttonContact").addClass("buttonFlasher slideOutLeftContactSelectedTablet");
-				}
+				}				
 
 				$("#contact").removeClass("foldAndHide startup");
 				$("#contact").addClass("unfoldAndReveal");
@@ -1255,10 +1315,10 @@
 
 			$("#homeAbout").click(function() {
 
-				$("#homeAbout").addClass("buttonFlasher homeCollapse");
+				$("#homeAbout").addClass("buttonFlasher");
 
 				$("#aboutMe").removeClass("unfoldAndReveal");
-				$("#aboutMe").addClass("foldAndHide");
+				$("#aboutMe").addClass("foldAndHide foldAndHidePreDelay");
 
 				setTimeout(bringBackHome, 2000);
 
@@ -1297,6 +1357,8 @@
 				$(".buttonLink").addClass("buttonLinkOut");
 				
 			});
+
+			
 
 
 
