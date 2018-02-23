@@ -15,38 +15,8 @@
 			20% {background-color: #ffaf4d;}
 			40% {background-color: #ffe8cc;}
 			60% {background-color: #ffaf4d;}
-			80% {background-color: #ffe8cc; color: black}
-			100% {background-color: #ffaf4d; color: #ffe8cc;}
-		}
-
-		@keyframes contentHider {
-
-			30% {height: 10vh; top: 40vh;}
-			60% {height: 10vh; top: 40vh; opacity: 1;}
-			100% {height: 10vh; top: 40vh; opacity: 0; display: none;}
-
-		}
-
-		@keyframes homeCollapser {
-
-			from {height: 14vh, top: 82%;}
-			to {height: 2vh, top: 0%;}
-
-		}
-
-		@keyframes homeExpander {
-
-				from {height: 2vh, top: 0%;}
-				to {height: 14vh, top: 82%;}
-
-		}
-
-		@keyframes contentReveal {
-
-			0% {height: 10vh; top: 40vh; opacity: 0; display: inline;}
-			40% {height: 10vh; top: 40vh; opacity: 1;}
-			70% {height: 80vh; top: 14vh; opacity: 1;}
-			100% {height: 80vh; top: 14vh; opacity: 1;}
+			80% {background-color: #ffe8cc;}
+			100% {background-color: #ffaf4d;}
 		}
 
 		body {
@@ -101,7 +71,7 @@
 			color: white;
 			background-color: #663399;
 			border-radius: 5px;
-			padding: 0.5vh 1vw 0.1vh 1vw;
+			padding: 0.5vh 2vw 0.1vh 2vw;
 			font-family: Audiowide;
 			box-sizing: border-box;	
 		}
@@ -213,14 +183,15 @@
 			text-align: justify;
 			padding-left: 5vw;
 			padding-right: 5vw;
+			margin-bottom: 3vh;
 			margin: 0;
 			padding-top: 0;
 			box-sizing: border-box;
 		}
 
 		.buttonHome {
-			height: 15%;
-			top: 82%;
+			height: 13%;
+			top: 83%;
 			border-radius: 50px;
 			width: 80vw;
 			margin-left: 4vw;
@@ -229,7 +200,9 @@
 			position: absolute;
 			box-sizing: border-box;
 			z-index: 4;
-			padding: 2vh;
+			padding: 1.4vh 0vw 0vh 0vw;
+			object-fit: contain;
+
 
 		}
 
@@ -250,73 +223,6 @@
 		.startup {
 			display: none;
 		}
-
-		/*.foldAndHidePreDelay {
-			height: 80vh;
-		}
-
-		.foldAndHide {
-			opacity: 1;
-			top: 14vh;
-			animation-delay: 0.8s;
-			animation-name: contentHider;
-			animation-duration: 2s;
-			animation-fill-mode: forwards;
-		}
-
-		.homeCollapse {
-			animation-delay: 0.8s;
-			animation-name: homeCollapser;
-			animation-duration: 2s;
-			animation-fill-mode: forwards;
-		}
-
-
-		.unfoldAndReveal {
-			
-			animation-delay: 1.5s;
-			animation-name: contentReveal;
-			animation-duration: 2s;
-			animation-fill-mode: forwards;
-		}
-
-		.homeExpand {
-			/*top: 82%;
-			animation-delay: 1.5s;
-			animation-name: homeExpander;
-			animation-duration: 2s;
-			animation-fill-mode: forwards;
-		}*/
-
-		/*
-
-		.slideOutLeft {
-			animation-name: slideOutToLeft;
-			animation-duration: 1s;
-			animation-fill-mode: forwards;
-			animation-timing-function: ease-in;
-		}
-
-		.slideOutRight {
-			animation-name: slideOutToRight;
-			animation-duration: 1s;
-			animation-fill-mode: forwards;
-			animation-timing-function: ease-in;
-		}
-
-		.slideOutLeftSelected {
-			animation-name: slideOutToLeft, buttonFlash;
-			animation-duration: 1.5s;
-			animation-fill-mode: forwards;
-			animation-timing-function: ease-in;
-		}
-
-		.slideOutRightSelected {
-			animation-name: slideOutToRight, buttonFlash;
-			animation-duration: 1.5s;
-			animation-fill-mode: forwards;
-			animation-timing-function: ease-in;
-		} */
 
 		#comingSoonPic {
 			width: 80vh;
@@ -363,6 +269,10 @@
 			resize: none;
 		}
 
+		#contact {
+			overflow: hidden;
+		}
+
 		#contactSubmit {
 			width: 70vw;
 			padding: 1vh;
@@ -380,36 +290,6 @@
 		@media only screen and (min-width: 600px) {
     		/* For tablets: */
 
-    		/*@keyframes slideInFromLeftAboutTablet {
-				from {left:-50vw;}
-				to {left: 15vw;}
-			}
-
-    		@keyframes slideInFromLeftContactTablet {
-				from {left:-50vw;}
-				to {left: 35vw;}
-			}
-
-			@keyframes slideInFromRightTablet {
-				from {left: 100vw;}
-				to {left: 62vw;}
-			}
-
-			@keyframes slideOutToLeftAboutTablet {
-				from {left:15vw;}
-				to {left:-50vw;}
-			}
-
-			@keyframes slideOutToLeftContactTablet {
-				from {left:35vw;}
-				to {left:-50vw;}
-			}
-
-			@keyframes slideOutToRightTablet {
-				from {left: 65vw;}
-				to {left: 100vw;}
-			} */
-
 			@keyframes portfolioWobbler {
 				12.5% {top: 35.2%;}
 				25% {top: 35.4%;}
@@ -419,32 +299,6 @@
 				70% {top: 34.6%;}
 				82.5% {top: 34.8%;}
 				100% {top: 35%;}
-			}
-
-			@keyframes contentReveal {
-
-				0% {height: 10vh; top: 40vh; opacity: 0; display: inline;}
-				40% {height: 10vh; top: 40vh; opacity: 1;}
-				70% {height: 80vh; top: 14vh; opacity: 1;}
-				100% {height: 80vh; top: 14vh; opacity: 1;}
-			}
-
-			@keyframes contentHider {
-
-				0% {height: 80vh;}
-				30% {height: 10vh; top: 40vh;}
-				60% {height: 10vh; top: 40vh; opacity: 1;}
-				100% {height: 10vh; top: 40vh; opacity: 0; display: none;}
-
-			}
-
-			@keyframes buttonFlash {
-				0% {background-color: #ffe8cc;}
-				25% {background-color: #ffaf4d;}
-				50% {background-color: #ffe8cc;}
-				75% {background-color: #ffaf4d;}
-				100% {background-color: #ffe8cc; color: #ffe8cc;}
-			
 			}
 
     		body {
@@ -477,16 +331,6 @@
 				z-index: 6;
 			}
 
-			/*
-			.buttonAboutSlideInTablet {
-				left: 15vw;
-				animation-name: slideInFromLeftAboutTablet;
-				animation-duration: 1s;
-				animation-timing-function: ease-out;
-				animation-delay: 0.8s;
-				animation-fill-mode: forwards;
-			}*/
-
 			#buttonPortfolio {
 				top: 32vh;			
 				left: 62vw;
@@ -494,34 +338,12 @@
 				z-index: 6;	
 			}
 
-			/*
-			.buttonPortfolioSlideInTablet {
-				left: 62vw;
-				animation-name: slideInFromRightTablet;
-				animation-duration: 1s;
-				animation-timing-function: ease-out;
-				animation-delay: 1.2s;
-				animation-fill-mode: forwards;
-			}*/
-
 			#buttonContact {
 				top: 60vh;
 				left: 35vw;
 				border-radius: 150px 150px 150px 150px;
 				border-left: black 6px solid;			
 			}
-
-			/*
-
-			.buttonContactSlideInTablet {
-				left: 35vw;
-				animation-name: slideInFromLeftContactTablet;
-				animation-duration: 1s;
-				animation-timing-function: ease-out;
-				animation-delay: 1.6s;
-				animation-fill-mode: forwards;
-			}
-			*/
 
 			#logo {
 				margin: 1vh;					
@@ -560,12 +382,10 @@
 				animation-iteration-count: infinite;
 			}
 
-			/*.contentDisplayer {
-				margin: 4vh 4vw 1vh 4vw;
-				width: 90vw;
-				height: 80vh;
-
-			}*/
+			.contentDisplayer {
+				width: 92vw;
+				border-width: 0.8vw;
+			}
 
 			.contentTitle {
 				border-style: solid;
@@ -575,9 +395,9 @@
 				border-radius: 8px;
 				position: absolute;
 				height: 13vh;
-				width: 90vw;
-				left: -0.85vw;
-				top: -1.2vh;
+				width: 92vw;
+				left: -0.8vw;
+				top: 0vh;
 				margin: 0;
 				padding: 1.2vh;
 				box-sizing: border-box;
@@ -590,77 +410,29 @@
 				color: white;
 				font-size: 3vh;
 				width: 100%;
-				top: 17%;
-				height: 60%;
+				top: 18%;
+				height: 62%;
 				position: absolute;
 				overflow-y: scroll;
 				text-align: justify;
 				padding-left: 3vw;
 				padding-right: 3vw;
-				display: inline-block;
 				box-sizing: border-box;
 			}
 
 			.buttonHome {
 				background-color: #ffaf4d;
 				height: 13%;
-				top: 82%;
 				border-radius: 50px;
-				width: 82vw;
-				margin-left: 3vw;
-				margin-right: 3vw;
-				margin-bottom: 3vh;
+				width: 84vw;
+				margin-top: 0.5vh;
 				position: absolute;
 				box-sizing: border-box;
 				z-index: 4;
-				padding: 0.5vh;
+				padding: 0.5vh 0vw 0vh 0vw;
 				font-size: 6vh;
 				overflow: hidden;
 			}
-
-
-/*
-			.slideOutLeftAboutTablet {
-				animation-name: slideOutToLeftAboutTablet;
-				animation-duration: 1.2s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-
-			.slideOutLeftContactTablet {
-				animation-name: slideOutToLeftContactTablet;
-				animation-duration: 1s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-
-			.slideOutRightTablet {
-				animation-name: slideOutToRightTablet;
-				animation-duration: 1s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-			
-			.slideOutLeftAboutSelectedTablet {
-				animation-name: slideOutToLeftAboutTablet, buttonFlash;
-				animation-duration: 1.5s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-
-			.slideOutLeftContactSelectedTablet {
-				animation-name: slideOutToLeftContactTablet, buttonFlash;
-				animation-duration: 1.5s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-
-			.slideOutRightSelectedTablet {
-				animation-name: slideOutToRightTablet, buttonFlash;
-				animation-duration: 1.5s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			} */
 
 			.formField {
 				width: 80vw;
@@ -681,65 +453,9 @@
 		@media only screen and (min-width: 768px) {
     		/* For desktop: */
 
-    		/*@keyframes slideInFromLeftAbout {
-				from {top: -40vh;}
-				to {top: -2vh;}
-			}
-
-    		@keyframes slideInFromLeftContact {
-				from {top:-40vh;}
-				to {top: -2vh;}
-			}
-
-			@keyframes slideInFromRight {
-				from {top: -40vh;}
-				to {top: -2vh;}
-			}
-
-			@keyframes titleBarSlideUp {
-				from {top: 0vh;}
-				to {top: -40vh;}
-			}
-
-			@keyframes buttonLinkSlideUp {
-				from {top: -2vh;}
-				to {top: -40vh;}
-			}*/
-
 			@keyframes welcomeFade {
 				from {opacity: 0;}
 				to {opacity: 1;}
-			}
-
-			@keyframes contentHider {
-
-				0% {height: 90vh; top: 2vh;}
-				30% {height: 2vh; top: 40vh;}
-				60% {height: 2vh; top: 40vh; opacity: 1;}
-				100% {height: 2vh; top: 40vh; opacity: 0; display: none;}
-
-			}
-
-			@keyframes homeCollapser {
-
-				from {height: 14vh, top: 88%;}
-				to {height: 2vh, top: 0%;}
-
-			}
-
-			@keyframes homeExpander {
-
-				from {height: 2vh, top: 0%;}
-				to {height: 14vh, top: 88%;}
-
-			}
-
-			@keyframes contentReveal {
-
-				0% {height: 10vh; top: 40vh; opacity: 0; display: inline;}
-				40% {height: 10vh; top: 40vh; opacity: 1;}
-				70% {height: 90vh; top: 1vh; opacity: 1;}
-				100% {height: 90vh; top: 1vh; opacity: 1;}
 			}
 
     		body {
@@ -793,15 +509,6 @@
 				z-index: 6;
 			}
 
-			/*.buttonAboutSlideIn {
-				left: 50vw;
-				animation-name: slideInFromLeftAbout;
-				animation-duration: 1s;
-				animation-timing-function: ease-out;
-				animation-delay: 0.8s;
-				animation-fill-mode: forwards;
-			}*/
-
 			#buttonPortfolio {
 				top: -2vh;
 				left: 65vw;
@@ -809,34 +516,12 @@
 				z-index: 6;	
 			}
 
-			/*
-
-			.buttonPortfolioSlideIn {
-				/*left: 100vw;
-				animation-name: slideInFromRight;
-				animation-duration: 1s;
-				animation-timing-function: ease-out;
-				animation-delay: 1.2s;
-				animation-fill-mode: forwards;
-			} */
-
 			#buttonContact {
 				top: -2vh;
 				left: 80vw;
 				border-radius: 0px 0px 30px 30px;
 				border-left: 6px solid;			
 			}
-
-			/*
-
-			.buttonContactSlideIn {
-				/*left: -50vw;
-				animation-name: slideInFromLeftContact;
-				animation-duration: 1s;
-				animation-timing-function: ease-out;
-				animation-delay: 1.6s;
-				animation-fill-mode: forwards;
-			} */
 
 			#logo {
 				margin: 1vh;					
@@ -882,17 +567,22 @@
 				animation-iteration-count: infinite;
 			}
 
-			/*.contentDisplayer {
-				position: absolute;
-				margin-left: 4vw;
-				margin-right: 4vw;
-				width: 90vw;
-				height: 80vh;
+			.contentDisplayer {
+				border-style: solid;
+				border-top: 0px;
 				border-width: 0.6vw;
-
-			}*/)
-
-			/*Continue to review CSS from this point forwards*/
+				border-radius: 8px 8px 50px 50px;
+				background: rgba(0, 0, 0, 0.7);
+				opacity: 0;
+				width: 90.6vw;
+				margin: 2vh 3vw 0vh 3vw;
+				z-index: 4;
+				position: absolute;
+				text-align: center;
+				font-family: Aldrich;
+				font-size: 6vh;
+				box-sizing: border-box;
+			}
 
 			.contentTitle {
 				border-style: solid;
@@ -902,9 +592,9 @@
 				border-radius: 8px;
 				position: absolute;
 				height: 10vh;
-				width: 90vw;
+				width: 91vw;
 				left: -0.6vw;
-				top: -1.2vh;
+				top: 0vh;
 				margin: 0;
 				padding: 1.2vh;
 				box-sizing: border-box;
@@ -918,69 +608,32 @@
 				font-size: 2.5vh;
 				width: 100%;
 				top: 12%;
-				height: 74%;
+				height: 75%;
 				position: absolute;
 				overflow-y: scroll;
 				text-align: justify;
 				padding-left: 3vw;
 				padding-right: 3vw;
-				display: inline-block;
+				display: block;
 				box-sizing: border-box;
+				overflow: hidden;
+				border: solid 2px white;
 			}
 
 			.buttonHome {
-				background-color: #ffaf4d;
-				height: 10%;
+				/*background-color: #ffaf4d;*/
+				height: 8%;
+				top: 88%;
 				border-radius: 50px;
-				width: 74vw;
-				margin-left: 8vw;
-				margin-right: 8vw;
+				width: 84vw;
+				margin: 0vh 3vw 0vh 3vw;
 				position: absolute;
 				box-sizing: border-box;
 				z-index: 4;
-				padding: 1vh;
+				padding: 0.4vh 0vw 0vh 0vh;
 				font-size: 5vh;
 				overflow: hidden;
 			}
-
-			/*
-
-			.slideOutLeftAboutDesktop {
-				animation-name: slideOutToLeftAbout;
-				animation-duration: 1.2s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-
-			.slideOutLeftContactDesktop {
-				animation-name: slideOutToLeftContact;
-				animation-duration: 1s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-			
-			.slideOutLeftAboutSelectedDesktop {
-				animation-name: slideOutToLeftAbout, buttonFlash;
-				animation-duration: 1.5s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-
-			.slideOutLeftContactSelectedDesktop {
-				animation-name: slideOutToLeftContact, buttonFlash;
-				animation-duration: 1.5s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-
-			.slideOutRightSelectedDesktop {
-				animation-name: slideOutToRight, buttonFlash;
-				animation-duration: 1.5s;
-				animation-fill-mode: forwards;
-				animation-timing-function: ease-in;
-			}
-
-			*/
 
 			.formField {
 				width: 80vw;
@@ -1044,18 +697,17 @@
 
 		}
 
-
-
 	</style>
+
 </head>
 
 <body>
 
 	<nav>
 			
-		<div class="buttonLink buttonAboutSlideIn buttonSlideInLeftPreDelay buttonAboutSlideInTablet" id="buttonAbout">About</div>
-		<div class="buttonLink buttonPortfolioSlideIn buttonPortfolioSlideInTablet" id="buttonPortfolio">Portfolio</div>
-		<div class="buttonLink buttonContactSlideIn buttonContactSlideInTablet" id="buttonContact">Contact</div>
+		<div class="buttonLink" id="buttonAbout">About</div>
+		<div class="buttonLink" id="buttonPortfolio">Portfolio</div>
+		<div class="buttonLink" id="buttonContact">Contact</div>
 
 	</nav>
 
@@ -1096,7 +748,7 @@
 			 
 			</div>
 
-			<div class="buttonLink buttonHome homeCollapse" id="homeAbout">Home</div> 
+			<div class="buttonLink buttonHome" id="homeAbout">Home</div> 
 
 		</div>
 	</div>
@@ -1143,9 +795,56 @@
 			var iAmHome = true;
 			var currentScreen = "home"
 
-			bringItHome();
+			titleBarShow();
+			bringItHome(800, 1200, 1600);
 
-			$(".contentDisplayer").css({"height":"13vh", "display":"none", "opacity":"0", "top":"36vh"});
+			$(window).resize(function() {						
+
+				if (iAmHome) {
+
+					if ($(window).width() < 600) {
+						$("#buttonAbout").css({"left":"0vw", "top":"20vh"});
+						$("#buttonPortfolio").css({"left":"15vw", "top":"45vh"});				
+						$("#buttonContact").css({"left":"0vw", "top":"70vh"});			
+					} else if ($(window).width() < 768) {
+						$("#buttonAbout").css({"left":"15vw", "top":"20vh"});
+						$("#buttonPortfolio").css({"left":"62vw", "top":"32vh"})
+						$("#buttonContact").css({"left":"35vw", "top":"60vh"});					
+					} else {
+						$("#buttonAbout").css({"left":"50vw", "top":"-2vh"});
+						$("#buttonPortfolio").css({"left":"80vw", "top":"-2vh"})
+						$("#buttonContact").css({"left":"65vw", "top":"-2vh"});
+						
+					}
+
+				} else {
+
+					if ($(window).width() < 600) {
+						$("#buttonAbout").css({"left":"-100vw", "top":"20vh"});
+						$("#buttonPortfolio").css({"left":"115vw", "top":"45vh"});				
+						$("#buttonContact").css({"left":"-100vw", "top":"70vh"});	
+						$("#aboutMe").css({"top":"14vh", "height":"80vh"});			
+						$(".contentDisplayer").css({"height":"80vh", "top":"14vh"});	
+						$("#titleBar").css({"top":"0vh"});
+					} else if ($(window).width() < 768) {
+						$("#buttonAbout").css({"left":"-50vw", "top":"20vh"});
+						$("#buttonPortfolio").css({"left":"115vw", "top":"32vh"})
+						$("#buttonContact").css({"left":"-50vw", "top":"60vh"});			
+						$("#aboutMe").css({"top":"17vh", "height":"78vh"});		
+						$(".contentDisplayer").css({"height":"78vh", "top":"17vh"});
+						$("#titleBar").css({"top":"0vh"});
+					} else {
+						$("#buttonAbout").css({"left":"50vw", "top":"-20vh"});
+						$("#buttonPortfolio").css({"left":"80vw", "top":"-20vh"})
+						$("#buttonContact").css({"left":"65vw", "top":"-20vh"});
+						$(".contentDisplayer").css({"height":"90vh", "top":"3vh"});
+						$("#titleBar").css({"top":"-20vh"});
+					}
+
+				}
+
+			});
+			
 			$("#titleBar").css({"top":"-20vh"});
 			/*$(".contentAndHome").css({"top":"0%", "height":"2vh"});*/
 
@@ -1205,12 +904,12 @@
 
 			};
 
-			function bringItHome() {
+			function bringItHome(abtDelay, pfDelay, ctDelay) {
 
-				titleBarShow();
-				setTimeout(aboutButtonShow, 800);
-				setTimeout(portfolioButtonShow, 1200);
-				setTimeout(contactButtonShow, 1600);
+				
+				setTimeout(aboutButtonShow, abtDelay);
+				setTimeout(portfolioButtonShow, pfDelay);
+				setTimeout(contactButtonShow, ctDelay);
 
 			};
 
@@ -1222,32 +921,38 @@
 					currentScreen = "about";
 					$("#aboutMe").css({"display":"inline"});
 					$("#buttonAbout").addClass("buttonFlasher");
+					$("#homeAbout").removeClass("buttonFlasher");
+
 					if ($(window).width() < 600) {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"left":"0vw"}).animate({"left":"-100vw"}, 1800);
 						$("#buttonPortfolio").css({"left":"15vw"}).animate({"left":"115vw"}, 1000);
 						$("#buttonContact").css({"left":"0vw"}).animate({"left":"-100vw"}, 1000);
+						/*launch the About Me window*/
 						$("#aboutMe").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
-						$("#aboutMe").css({"height":"13vh", "top":"36vh", "border-radius":"8px"}).delay(1000).animate({"height":"80vh", "top":"14vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
-						$(".buttonHome").css({"top":"10%"}).animate({"top":"82%"});		
-						/*$(".contentAndHome").css({"top":"0%", "height":"2vh"}).animate({"top":"18%", "height":"65vh"});*/
+						$("#aboutMe").css({"height":"13vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"80vh", "top":"14vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);		
 					} else if ($(window).width() < 768) {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"left":"15vw"}).animate({"left":"-50vw"}, 1800);
 						$("#buttonPortfolio").css({"left":"62vw"}).animate({"left":"115vw"}, 1000);
 						$("#buttonContact").css({"left":"35vw"}).animate({"left":"-50vw"}, 1000);
+						/*launch the About Me window*/
+						$("#aboutMe").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#aboutMe").css({"height":"13vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"78vh", "top":"17vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
 					} else {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#buttonPortfolio").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#buttonContact").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#titleBar").css({"top":"0vh"}).animate({"top":"-20vw"}, 1000);
+						/*launch the About Me window*/
+						$("#aboutMe").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#aboutMe").css({"height":"10vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"90vh", "top":"3vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
+						$("#welcomeContainer").removeClass("welcomeAppear");
+						$("#welcomeContainer").addClass("welcomeDisappear");
 					}
 
 				}				
-
-				$("#aboutMe").removeClass("foldAndHide startup");
-				$("#aboutMe").addClass("unfoldAndReveal");
-
-				$(".buttonHome").removeClass("buttonFlasher homeCollapse");
-				$(".buttonHome").addClass("homeExpand");
 
 			});
 
@@ -1257,30 +962,42 @@
 
 					iAmHome = false;
 					currentScreen = "portfolio";
+					$("#portfolio").css({"display":"inline"});
 					$("#buttonPortfolio").addClass("buttonFlasher");
+					$("#homePortfolio").removeClass("buttonFlasher");
+
 					if ($(window).width() < 600) {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"left":"0vw"}).animate({"left":"-100vw"}, 1000);
 						$("#buttonPortfolio").css({"left":"15vw"}).animate({"left":"115vw"}, 1800);
 						$("#buttonContact").css({"left":"0vw"}).animate({"left":"-100vw"}, 1000);
+						/*launch the About Me window*/
+						$("#portfolio").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#portfolio").css({"height":"13vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"80vh", "top":"14vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);		
 					} else if ($(window).width() < 768) {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"left":"15vw"}).animate({"left":"-50vw"}, 1000);
 						$("#buttonPortfolio").css({"left":"62vw"}).animate({"left":"115vw"}, 1800);
 						$("#buttonContact").css({"left":"35vw"}).animate({"left":"-50vw"}, 1000);
+						/*launch the About Me window*/
+						$("#portfolio").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#portfolio").css({"height":"13vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"78vh", "top":"17vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
 					} else {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#buttonPortfolio").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#buttonContact").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#titleBar").css({"top":"0vh"}).animate({"top":"-20vw"}, 1000);
+						/*launch the About Me window*/
+						$("#portfolio").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#portfolio").css({"height":"10vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"90vh", "top":"3vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
+						$("#welcomeContainer").removeClass("welcomeAppear");
+						$("#welcomeContainer").addClass("welcomeDisappear");
 					}
 
 				}				
-
-				$("#portfolio").removeClass("foldAndHide startup");
-				$("#portfolio").addClass("unfoldAndReveal");
-
-				$(".buttonHome").removeClass("buttonFlasher");
-
-			});
+				
+			});							
 
 			$("#buttonContact").click(function() {
 
@@ -1288,61 +1005,120 @@
 
 					iAmHome = false;
 					currentScreen = "contact";
+					$("#contact").css({"display":"inline"});
 					$("#buttonContact").addClass("buttonFlasher");
+					$("#homeContact").removeClass("buttonFlasher");
+
 					if ($(window).width() < 600) {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"left":"0vw"}).animate({"left":"-100vw"}, 1000);
 						$("#buttonPortfolio").css({"left":"15vw"}).animate({"left":"115vw"}, 1000);
 						$("#buttonContact").css({"left":"0vw"}).animate({"left":"-100vw"}, 1800);
+						/*launch the About Me window*/
+						$("#contact").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#contact").css({"height":"13vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"80vh", "top":"14vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);		
 					} else if ($(window).width() < 768) {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"left":"15vw"}).animate({"left":"-50vw"}, 1000);
 						$("#buttonPortfolio").css({"left":"62vw"}).animate({"left":"115vw"}, 1000);
 						$("#buttonContact").css({"left":"35vw"}).animate({"left":"-50vw"}, 1800);
+						/*launch the About Me window*/
+						$("#contact").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#contact").css({"height":"13vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"78vh", "top":"17vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
 					} else {
+						/*Hide the home screen buttons*/
 						$("#buttonAbout").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#buttonPortfolio").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#buttonContact").css({"top":"-2vh"}).animate({"top":"-20vh"}, 1000);
 						$("#titleBar").css({"top":"0vh"}).animate({"top":"-20vw"}, 1000);
+						/*launch the About Me window*/
+						$("#contact").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
+						$("#contact").css({"height":"10vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"90vh", "top":"3vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
+						$("#welcomeContainer").removeClass("welcomeAppear");
+						$("#welcomeContainer").addClass("welcomeDisappear");
 					}
 
-				}				
+				}								
 
-				$("#contact").removeClass("foldAndHide startup");
-				$("#contact").addClass("unfoldAndReveal");
-
-				$(".buttonHome").removeClass("buttonFlasher");
-
-			});
+			});		
 
 			$("#homeAbout").click(function() {
 
 				$("#homeAbout").addClass("buttonFlasher");
+				$("#buttonAbout").removeClass("buttonFlasher");
+				$("#buttonPortfolio").removeClass("buttonFlasher");
+				$("#buttonContact").removeClass("buttonFlasher");
 
-				$("#aboutMe").removeClass("unfoldAndReveal");
-				$("#aboutMe").addClass("foldAndHide foldAndHidePreDelay");
+				iAmHome = true;
+				currentScreen = "home"
 
-				setTimeout(bringBackHome, 2000);
+				if ($(window).width() < 600) {
+					/*Fold and hide the detail screens*/					
+					$("#aboutMe").css({"height":"80vh", "top":"14vh", "border-bottom-left-radius":"50px", "border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh", "border-bottom-left-radius":"8px", "border-bottom-right-radius":"8px"}, 1000);		
+					
+				}  else if ($(window).width() < 768) {
+					/*Fold and hide the detail screens*/					
+					$("#aboutMe").css({"height":"78vh", "top":"17vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
+				} else {
+					/*Fold and hide the detail screens*/					
+					$("#aboutMe").css({"height":"90vh", "top":"3vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"10vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
+				}
 
+				$("#aboutMe").css({"opacity":"1"}).delay(1000).animate({"opacity":"0"}, 500);
+
+				setTimeout(titleBarShow, 2000);
+				bringItHome(2800, 3200, 3600);		
+				
 			});
 
 			$("#homePortfolio").click(function() {
 
-				$("#homePortfolio").addClass("buttonFlasher homeCollapse");
+				$("#homePortfolio").addClass("buttonFlasher");
 
-				$("#portfolio").removeClass("unfoldAndReveal");
-				$("#portfolio").addClass("foldAndHide");
+				iAmHome = true;
+				currentScreen = "home"
 
-				setTimeout(bringBackHome, 2000);
+				if ($(window).width() < 600) {
+					/*Fold and hide the detail screens*/					
+					$("#portfolio").css({"height":"80vh", "top":"14vh", "border-bottom-left-radius":"50px", "border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh", "border-bottom-left-radius":"8px", "border-bottom-right-radius":"8px"}, 1000);		
+					
+				}  else if ($(window).width() < 768) {
+					/*Fold and hide the detail screens*/					
+					$("#portfolio").css({"height":"78vh", "top":"17vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
+				} else {
+					/*Fold and hide the detail screens*/					
+					$("#portfolio").css({"height":"90vh", "top":"3vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
+				}
+
+				$("#portfolio").css({"opacity":"1"}).delay(1000).animate({"opacity":"0"}, 500);
+
+				bringItHome(2800, 3200, 3600);
 
 			});			
 
 			$("#homeContact").click(function() {
 
-				$("#homeContact").addClass("buttonFlasher homeCollapse");
+				$("#homeContact").addClass("buttonFlasher");
 
-				$("#contact").removeClass("unfoldAndReveal");
-				$("#contact").addClass("foldAndHide");
+				iAmHome = true;
+				currentScreen = "home"
 
-				setTimeout(bringBackHome, 2000);
+				if ($(window).width() < 600) {
+					/*Fold and hide the detail screens*/					
+					$("#contact").css({"height":"80vh", "top":"14vh", "border-bottom-left-radius":"50px", "border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh", "border-bottom-left-radius":"8px", "border-bottom-right-radius":"8px"}, 1000);		
+					
+				}  else if ($(window).width() < 768) {
+					/*Fold and hide the detail screens*/					
+					$("#contact").css({"height":"78vh", "top":"17vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
+				} else {
+					/*Fold and hide the detail screens*/					
+					$("#contact").css({"height":"90vh", "top":"3vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
+
+				}
+
+				$("#contact").css({"opacity":"1"}).delay(1000).animate({"opacity":"0"}, 500); 
+
+				bringItHome(2800, 3200, 3600);
 
 			});		
 
