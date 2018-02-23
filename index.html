@@ -19,6 +19,39 @@
 			100% {background-color: #ffaf4d;}
 		}
 
+		.column {
+			background-color: rgba(200, 200, 200, 0.2);
+			padding-top: 2vh;
+			padding-bottom: 2vh;
+			border-radius: 2vh;
+			margin-bottom: 2vh;
+			width: 95%;
+			float: left;
+			margin-left: 2.5%;
+			margin-right: 2.5%;
+		}
+
+		.portfolioImage {
+			width: 80%;
+			margin-left: 10%;
+			margin-right: 10%;
+			border-radius: 1vw;
+
+		}
+
+		.portfolioGallery {
+			font-size: 4vw;
+			text-align: center;
+		}
+
+		#me {
+			box-shadow: 0 0 8px 8px white inset;
+		}
+
+		p {
+			margin: 1vh;
+		}
+
 		body {
 			background-clip: padding-box;
 			background-color: black;
@@ -54,6 +87,8 @@
 			text-shadow: 3px 3px black;
 			color: white;
 		}
+
+
 
 		#logo {
 			margin: 1vh;
@@ -172,6 +207,10 @@
 			font-family: Audiowide;		
 		}
 
+		li {
+			text-align: left;
+		}
+
 		.contentContainer {
 			color: white;
 			font-size: 3vh;
@@ -180,6 +219,7 @@
 			height: 62%;
 			position: absolute;
 			overflow-y: scroll;
+			overflow-x: hidden;
 			text-align: justify;
 			padding-left: 5vw;
 			padding-right: 5vw;
@@ -187,6 +227,8 @@
 			margin: 0;
 			padding-top: 0;
 			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
 		}
 
 		.buttonHome {
@@ -313,6 +355,11 @@
 
 			}
 
+			.column {
+				width: 45%;
+				height: 80vh;
+			}
+
     		.buttonLink { 
 				border-width: 6px;
 				background-color: #ffaf4d;
@@ -387,6 +434,21 @@
 				border-width: 0.8vw;
 			}
 
+			#aboutMeDetail {
+				width: 55%;
+				overflow-y: scroll;
+				height: 100%;
+				padding: 0vh 2vw 0vh 0vw;
+			}
+
+			#me {
+				top: 0vh;
+				left: 62%;
+				width: 38%;
+				position: absolute;
+				overflow-y: hidden;
+			}
+
 			.contentTitle {
 				border-style: solid;
 				border-width: 0.8vw;
@@ -418,6 +480,12 @@
 				padding-left: 3vw;
 				padding-right: 3vw;
 				box-sizing: border-box;
+				flex-wrap: nowrap;
+				display: block;
+			}
+
+			span {
+				margin: 0px;
 			}
 
 			.buttonHome {
@@ -468,6 +536,31 @@
 				background-size: 120%;
 				overflow: hidden;
 
+			}
+
+			.column {
+				width: 20%;
+				margin-left: 2.5%;
+				margin-right: 2.5%;
+				float: left;
+				box-sizing: border-box;
+				height: 50%;
+				
+			}
+			.row {
+				height: 50%;
+				display: inline;
+			}
+
+			.portfolioGallery {
+				font-size: 1vw;
+				text-align: center;
+				position: absolute;
+				display: inline;
+			}
+
+			.portfolioImage {
+				height: 20%;
 			}
 
     		.buttonLink { 
@@ -582,6 +675,21 @@
 				font-family: Aldrich;
 				font-size: 6vh;
 				box-sizing: border-box;
+
+			}
+
+			#aboutMeDetail {
+				width: 50%;
+				overflow-y: scroll;
+				height: 100%;
+			}
+
+			#me {
+				top: 10vh;
+				left: 55%;
+				width: 40%;
+				position: absolute;
+				overflow: hidden;
 			}
 
 			.contentTitle {
@@ -610,14 +718,12 @@
 				top: 12%;
 				height: 75%;
 				position: absolute;
-				overflow-y: scroll;
+				overflow-y: hidden;
 				text-align: justify;
 				padding-left: 3vw;
 				padding-right: 3vw;
-				display: block;
 				box-sizing: border-box;
-				overflow: hidden;
-				border: solid 2px white;
+				flex-wrap: wrap;
 			}
 
 			.buttonHome {
@@ -718,8 +824,8 @@
 	</div>
 
 	<div class="welcomeContainer"> 
-		<p class="landing welcome welcomeAppear">Welcome</p>
-		<p class="landing direction welcomeAppear">Please use the buttons at the top to explore the site</p>
+		<span class="landing welcome welcomeAppear">Welcome</span>
+		<span class="landing direction welcomeAppear">Please use the buttons at the top to explore the site</span>
 	</div>
 	<div class="contentDisplayer startup" id="aboutMe">
 
@@ -728,24 +834,51 @@
 		<div class="contentAndHome">
 
 			<div class="contentContainer" id="aboutMeContainer">
-				<p>My name is Carl Chilton. I have much exposure to the IT industry. I worked as an desktop, network and server engineer for 10 
-			years.			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			 consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			 proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 	</p>
-			 
+
+				<div id="aboutMeDetail">
+				<p>Welcome to my website!</p>
+				<p>Let me introduce myself. My name is Carl Chilton. I'm currently studying to become a full stack web developer. This website is the first of many websites, following the course content covering front end web development.</p>
+				<p>A little bit about my career history, I worked as a desktop and network engineer for 10 years, where I first properly encountered coding. I have always enjoyed it. Following a brief tour of south east asia, I came back to the UK and started working in Service Delivery, providing helpdesk services for government contracts. Throughout this period, I heavily utilised code, such as VBA, HTML and CSS with microsoft office and SharePoint. It was at this point I made a decision to focus on coding fully and study in my spare time.</p>
+
+				<p>As is always the case in life when starting a new venture, I am keen to get more experience and have the proof to back it up. As such, I am more than willing to provide front end web development services for free, to be able to build up my portfolio as soon as possible. I have always felt I have a personal creative flair, which I also apply to the various musical instruments I have picked up over the years. If you, or someone you know, needs the help of these services, then please feel free to pop over to the contact section of the site and get in touch. :) </p>
+
+				<p>Please see below for a full list of skills I have acquired and will soon learn: </p>
+
+				<ul> 
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>JavaScript</li>
+					<li>Mobile first responsive design</li>
+					<li>Jquery</li>
+					<li>Bootstrap framework</li>
+					<li>Jasmine testing framework</li>
+					<li>UX design</li>
+					<li>Balsamiq</li>
+					<li>Git and Github</li>
+				</ul>
+				<p>In the pipeline: </p>
+				<ul> 
+					<li>Python</li>
+					<li>Database fundamentals</li>
+					<li>MySQL</li>
+					<li>API's</li>
+					<li>Mongo DB</li>
+					<li>Flask</li>
+					<li>Data Visualisation</li>
+					<li>Heroku</li>
+					<li>Django framework</li>
+					<li>Stripe payments</li>
+					<li>Paypal payments</li>
+					<li>Github apps</li>
+					<li>Forums</li>
+					<li>Django's testing framework</li>
+					<li>Django's REST</li>
+				</ul>
+				<p>Hope to hear from you soon!!!</p>
+			</div>
+
+				<img id="me" src="img/myPicture.jpg" alt="Picture of me"/>
+			 	
 			</div>
 
 			<div class="buttonLink buttonHome" id="homeAbout">Home</div> 
@@ -757,8 +890,53 @@
 
 		<div class="contentTitle" id="portfolioTitle">Portfolio</div>
 
-		<div class="contentContainer" id="portfolioContainer"><p>At present, this is my first website so don't have anything other to showcase, however, you can find my contact details on the previous page, if you wish to get in touch. I'm eager to begin building it up for exposure.</p>	
-		<img id="comingSoonPic" src="img/comingSoon.png" alt="Coming soon image"/>
+		<div class="contentContainer" id="portfolioContainer">
+			<div class="portfolioGallery">
+				<div class="row">
+					<div class="column">
+						<img class="portfolioImage" src="img/website1.jpg" alt="Website Example 1"/>
+						<h3><a href="#">Website 1</a></h3>
+						<p>Full description of website detail and associated purpose. Website header will allow you to visit the site.</p>
+					</div>
+					<div class="column">
+						<img class="portfolioImage" src="img/website2.jpg" alt="Website Example 2"/>
+						<h3><a href="#">Website 2</a></h3>
+						<p>Full description of website detail and associated purpose. Website header will allow you to visit the site.</p>
+					</div>
+					<div class="column">
+						<img class="portfolioImage" src="img/website3.jpg" alt="Website Example 3"/>
+						<h3><a href="#">Website 3</a></h3>
+						<p>Full description of website detail and associated purpose. Website header will allow you to visit the site.</p>
+					</div>
+					<div class="column">
+						<img class="portfolioImage" src="img/website4.jpg" alt="Website Example 4"/>
+						<h3><a href="#">Website 4</a></h3>
+						<p>Full description of website detail and associated purpose. Website header will allow you to visit the site.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="column">
+						<img class="portfolioImage" src="img/website5.jpg" alt="Website Example 5"/>
+						<h3><a href="#">Website 5</a></h3>
+						<p>Full description of website detail and associated purpose. Website header will allow you to visit the site.</p>
+					</div>
+					<div class="column">
+						<img class="portfolioImage" src="img/website6.jpg" alt="Website Example 6"/>
+						<h3><a href="#">Website 6</a></h3>
+						<p>Full description of website detail and associated purpose. Website header will allow you to visit the site.</p>
+					</div>
+					<div class="column">
+						<img class="portfolioImage" src="img/website7.jpg" alt="Website Example 7"/>
+						<h3><a href="#">Website 7</a></h3>
+						<p>Full description of website detail and associated purpose. Website header will allow you to visit the site.</p>
+					</div>
+					<div class="column">
+						<img class="portfolioImage" src="img/website8.jpg" alt="Website Example 8"/>
+						<h3><a href="#">Website 8</a></h3>
+						<p>Full description of website detail and associated purpose. Website header will allow you to visit the site.</p>
+					</div>
+				</div>
+			</div> 
 
 		</div>
 
@@ -901,6 +1079,7 @@
 			function titleBarShow() {
 
 				$("#titleBar").css({"top":"-20vh"}).animate({"top":"0vw"}, 1000);
+				$(".welcomeContainer").addClass("welcomeAppear");
 
 			};
 
@@ -948,8 +1127,8 @@
 						/*launch the About Me window*/
 						$("#aboutMe").css({"opacity":"0"}).delay(1000).animate({"opacity":"1"}, 500);
 						$("#aboutMe").css({"height":"10vh", "top":"40vh", "border-radius":"8px"}).delay(1000).animate({"height":"90vh", "top":"3vh","border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}, 1000);	
-						$("#welcomeContainer").removeClass("welcomeAppear");
-						$("#welcomeContainer").addClass("welcomeDisappear");
+						$(".welcomeContainer").removeClass("welcomeAppear");
+						$(".welcomeContainer").addClass("welcomeDisappear");
 					}
 
 				}				
@@ -1066,7 +1245,10 @@
 
 				$("#aboutMe").css({"opacity":"1"}).delay(1000).animate({"opacity":"0"}, 500);
 
-				setTimeout(titleBarShow, 2000);
+				if ($(window).width() >= 768) {
+					setTimeout(titleBarShow, 2000);
+				}
+
 				bringItHome(2800, 3200, 3600);		
 				
 			});
@@ -1091,6 +1273,10 @@
 				}
 
 				$("#portfolio").css({"opacity":"1"}).delay(1000).animate({"opacity":"0"}, 500);
+
+				if ($(window).width() >= 768) {
+					setTimeout(titleBarShow, 2000);
+				}
 
 				bringItHome(2800, 3200, 3600);
 
@@ -1117,6 +1303,10 @@
 				}
 
 				$("#contact").css({"opacity":"1"}).delay(1000).animate({"opacity":"0"}, 500); 
+
+				if ($(window).width() >= 768) {
+					setTimeout(titleBarShow, 2000);
+				}
 
 				bringItHome(2800, 3200, 3600);
 
