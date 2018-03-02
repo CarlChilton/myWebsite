@@ -45,7 +45,7 @@
 		}
 
 		#me {
-			box-shadow: 0 0 8px 8px white inset;
+			box-shadow: 0 0 10px 10px black inset;
 		}
 
 		p {
@@ -443,7 +443,7 @@
 
 			#me {
 				top: 0vh;
-				left: 62%;
+				left: 60%;
 				width: 38%;
 				position: absolute;
 				overflow-y: hidden;
@@ -468,6 +468,13 @@
 				font-family: Audiowide;
 			}
 
+			
+
+			.column {
+				height: 43vh;
+				font-size: 2vh;
+			}
+
 			.contentContainer {
 				color: white;
 				font-size: 3vh;
@@ -475,13 +482,17 @@
 				top: 18%;
 				height: 62%;
 				position: absolute;
-				overflow-y: scroll;
+				/*overflow-y: hidden;*/
 				text-align: justify;
 				padding-left: 3vw;
 				padding-right: 3vw;
 				box-sizing: border-box;
 				flex-wrap: nowrap;
 				display: block;
+			}
+
+			.portfolioGallery {
+				/*overflow-y: scroll;*/
 			}
 
 			span {
@@ -742,23 +753,21 @@
 			}
 
 			.formField {
-				width: 80vw;
+				width: 82vw;
+				margin-top: 3vh;
+				margin-bottom: 3vh;
 			}			
 
 			textarea {
-				width: 80vw;
+				margin-top: 3vh;
+				height: 20vh;
+				width: 82vw;
 			}
 
 			#contactSubmit {
 				width: 74vw;
 				padding: 1vh;
-				margin-top: 1vh;
-			}
-
-			.foldAndHide {
-
-				top: 1vh;
-				height: 90vh;
+				/*margin-top: 10vh;*/
 			}
 
 			.welcomeContainer {
@@ -875,9 +884,8 @@
 					<li>Django's REST</li>
 				</ul>
 				<p>Hope to hear from you soon!!!</p>
-			</div>
-
-				<img id="me" src="img/myPicture.jpg" alt="Picture of me"/>
+				</div>
+					<img id="#me" src="img/myPicture.jpg" alt="Picture of me"/>
 			 	
 			</div>
 
@@ -990,8 +998,8 @@
 						$("#buttonContact").css({"left":"35vw", "top":"60vh"});					
 					} else {
 						$("#buttonAbout").css({"left":"50vw", "top":"-2vh"});
-						$("#buttonPortfolio").css({"left":"80vw", "top":"-2vh"})
-						$("#buttonContact").css({"left":"65vw", "top":"-2vh"});
+						$("#buttonPortfolio").css({"left":"65vw", "top":"-2vh"})
+						$("#buttonContact").css({"left":"80vw", "top":"-2vh"});
 						
 					}
 
@@ -1002,20 +1010,40 @@
 						$("#buttonPortfolio").css({"left":"115vw", "top":"45vh"});				
 						$("#buttonContact").css({"left":"-100vw", "top":"70vh"});	
 						$("#aboutMe").css({"top":"14vh", "height":"80vh"});			
-						$(".contentDisplayer").css({"height":"80vh", "top":"14vh"});	
+						if (currentScreen="about") {
+							$("#aboutMe").css({"height":"80vh", "top":"14vh"});	
+						} else if (currentScreen="portfolio") {
+							$("#portfolio").css({"height":"80vh", "top":"14vh"});	
+						} else {
+							$("#contact").css({"height":"80vh", "top":"14vh"});	
+						}	
 						$("#titleBar").css({"top":"0vh"});
 					} else if ($(window).width() < 768) {
 						$("#buttonAbout").css({"left":"-50vw", "top":"20vh"});
 						$("#buttonPortfolio").css({"left":"115vw", "top":"32vh"})
 						$("#buttonContact").css({"left":"-50vw", "top":"60vh"});			
 						$("#aboutMe").css({"top":"17vh", "height":"78vh"});		
-						$(".contentDisplayer").css({"height":"78vh", "top":"17vh"});
+						if (currentScreen="about") {
+							$("#aboutMe").css({"height":"78vh", "top":"17vh"});	
+						} else if (currentScreen="portfolio") {
+							$("#portfolio").css({"height":"78vh", "top":"17vh"});	
+						} else {
+							$("#contact").css({"height":"78vh", "top":"17vh"});	
+						}
+						
 						$("#titleBar").css({"top":"0vh"});
 					} else {
 						$("#buttonAbout").css({"left":"50vw", "top":"-20vh"});
-						$("#buttonPortfolio").css({"left":"80vw", "top":"-20vh"})
-						$("#buttonContact").css({"left":"65vw", "top":"-20vh"});
+						$("#buttonPortfolio").css({"left":"65vw", "top":"-20vh"})
+						$("#buttonContact").css({"left":"80vw", "top":"-20vh"});
 						$(".contentDisplayer").css({"height":"90vh", "top":"3vh"});
+						if (currentScreen="about") {
+							$("#aboutMe").css({"height":"90vh", "top":"3vh"});	
+						} else if (currentScreen="portfolio") {
+							$("#portfolio").css({"height":"90vh", "top":"3vh"});	
+						} else {
+							$("#contact").css({"height":"90vh", "top":"3vh"});	
+						}
 						$("#titleBar").css({"top":"-20vh"});
 					}
 
@@ -1269,7 +1297,7 @@
 					$("#portfolio").css({"height":"78vh", "top":"17vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
 				} else {
 					/*Fold and hide the detail screens*/					
-					$("#portfolio").css({"height":"90vh", "top":"3vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
+					$("#portfolio").css({"height":"90vh", "top":"3vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"10vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
 				}
 
 				$("#portfolio").css({"opacity":"1"}).delay(1000).animate({"opacity":"0"}, 500);
@@ -1298,7 +1326,7 @@
 					$("#contact").css({"height":"78vh", "top":"17vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
 				} else {
 					/*Fold and hide the detail screens*/					
-					$("#contact").css({"height":"90vh", "top":"3vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"13vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
+					$("#contact").css({"height":"90vh", "top":"3vh", "border-bottom-left-radius":"50px","border-bottom-right-radius":"50px"}).delay(1000).animate({"height":"10vh", "top":"40vh","border-bottom-left-radius":"8px","border-bottom-right-radius":"8px"}, 1000);	
 
 				}
 
